@@ -1,0 +1,152 @@
+
+<p>配点 : <var>600</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>頂点 <var>1,</var> 頂点 <var>2,\ldots,</var> 頂点 <var>N</var> の <var>N</var> 頂点からなる木 <var>T</var> が与えられます。
+<var>i</var> 番目 <var>(1\leq i\lt N)</var> の辺は頂点 <var>u _ i</var> と頂点 <var>v _ i</var> を結んでいます。</p>
+<p><var>T</var> の頂点 <var>u</var> について <var>f(u)</var> を次のように定めます。</p>
+<ul>
+<li><var>f(u)\coloneqq</var> <var>T</var> の頂点 <var>v</var> と頂点 <var>w</var> の組であって、次の <var>2</var> つの条件を満たすものの個数<ul>
+<li>頂点 <var>u</var> と頂点 <var>v</var> を結ぶパス上に頂点 <var>w</var> が含まれる。</li>
+<li><var>v\lt w</var></li>
+</ul>
+</li>
+</ul>
+<p>ただし、「頂点 <var>u</var> と頂点 <var>v</var> を結ぶパス上に頂点 <var>w</var> が含まれる」は、<var>u=w</var> や <var>v=w</var> のときにも成立するとします。</p>
+<p><var>f(1),f(2),\ldots,f(N)</var> の値を求めてください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>2\leq N\leq2\times10 ^ 5</var></li>
+<li><var>1\leq u _ i\leq N\ (1\leq i\leq N)</var></li>
+<li><var>1\leq v _ i\leq N\ (1\leq i\leq N)</var></li>
+<li>与えられるグラフは木</li>
+<li>入力はすべて整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var>
+<var>u _ 1</var> <var>v _ 1</var>
+<var>u _ 2</var> <var>v _ 2</var>
+<var>\vdots</var>
+<var>u _ {N-1}</var> <var>v _ {N-1}</var>
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p><var>f(1),f(2),\ldots,f(N)</var> の値をこの順に空白を区切りとして出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>7
+1 2
+2 3
+2 4
+4 5
+4 6
+6 7
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>0 1 3 4 8 9 15
+</pre>
+
+<p>与えられる木は以下のようになります。</p>
+<p><img src='https://img.atcoder.jp/abc337/f02c6287abee93272dda64faf9499a81.png' style='max-width:95%'/></p>
+<p>例えば、<var>f(4)=4</var> です。
+実際、<var>u=4</var> に対して <var>(v,w)=(1,2),(1,4),(2,4),(3,4)</var> の <var>4</var> 通りが条件を満たします。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>15
+14 9
+9 1
+1 6
+6 12
+12 2
+2 15
+15 4
+4 11
+11 13
+13 3
+3 8
+8 10
+10 7
+7 5
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>36 29 32 29 48 37 45 37 44 42 33 36 35 57 35
+</pre>
+
+<p>与えられる木は以下のようになります。</p>
+<p><img src='https://img.atcoder.jp/abc337/e59ed095480b6f8ec4ecfc212f14e635.png' style='max-width:95%'/></p>
+<p><var>f(14)</var> の値は、数列 <var>(14,9,1,6,12,2,15,4,11,13,3,8,10,7,5)</var> の転倒数 <var>57</var> になります。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>24
+7 18
+4 2
+5 8
+5 15
+6 5
+13 8
+4 6
+7 11
+23 16
+6 18
+24 16
+14 21
+20 15
+16 18
+3 16
+11 10
+9 11
+15 14
+12 19
+5 1
+9 17
+5 22
+11 19
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>20 20 41 20 21 20 28 28 43 44 36 63 40 46 34 40 59 28 53 53 66 42 62 63
+</pre></section>
+</div>

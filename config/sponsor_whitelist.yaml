@@ -1,0 +1,45 @@
+# AtCoder 협찬 ABC 대상: 일본 대기업 화이트리스트
+# contest_title에 sponsor 키워드 + 협찬 표기(プログラミングコンテスト 등)가 모두 있어야 포함
+
+sponsor_markers:
+  - "プログラミングコンテスト"
+  - "Programming Contest"
+  - "Sponsored by"
+
+enterprises:
+  - id: toyota
+    keywords: ["toyota", "トヨタ", "Toyota"]
+  - id: panasonic
+    keywords: ["panasonic", "パナソニック", "Panasonic"]
+  - id: hitachi
+    keywords: ["hitachi", "Hitachi", "日立"]
+  - id: denso
+    keywords: ["denso", "デンソー", "Denso"]
+  - id: keyence
+    keywords: ["keyence", "キーエンス", "Keyence"]
+  - id: kyocera
+    keywords: ["kyocera", "京セラ", "Kyocera"]
+  - id: tokyo_marine
+    keywords: ["東京海上", "Tokio Marine", "tokiomarine"]
+  - id: nec
+    keywords: ["NEC"]
+  - id: unique_vision
+    keywords: ["ユニークビジョン", "UNIQUE VISION", "Unique Vision"]
+  - id: nomura
+    keywords: ["NOMURA", "野村"]
+  - id: freee
+    keywords: ["freee"]
+  - id: line
+    keywords: ["LINE "]
+  - id: sky
+    keywords: ["Ｓｋｙ", "Sky Inc", "Sky株式会社"]
+  - id: hhkb
+    keywords: ["HHKB"]
+  - id: mitsubishi
+    keywords: ["三菱"]
+  - id: suntory
+    keywords: ["サントリー", "Suntory"]
+  - id: dena
+    keywords: ["DeNA", "ディー・エヌ・エー"]
+  - id: rakuten
+    keywords: ["楽天", "Rakuten"]

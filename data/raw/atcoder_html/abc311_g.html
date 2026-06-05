@@ -1,0 +1,52 @@
+
+			
+
+
+	
+	
+
+			<span class="lang">
+<span class="lang-ja">
+<p>配点 : <var>575</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p><var>N \times M</var> のグリッドがあり、上から <var>i</var> 行目、左から <var>j</var> 列目のマス <var>(i,j)</var> には非負整数 <var>A_{i,j}</var> が書かれています。<br />
+このグリッドのうち長方領域をひとつ選び、それを <var>R</var> とします。<br />
+厳密には、長方領域は以下の手順で選ばれます。</p>
+<ul>
+<li><var>1 \le l_x \le r_x \le N, 1 \le l_y \le r_y \le M</var> なる整数 <var>l_x, r_x, l_y, r_y</var> を選ぶ。</li>
+<li>このとき、整数 <var>i,j</var> が <var>l_x \le i \le r_x</var> かつ <var>l_y \le j \le r_y</var> を満たす、またその時に限って、マス <var>(i,j)</var> は <var>R</var> に含まれる。</li>
+</ul>
+<p>適切に <var>R</var> を選ぶことによって、 <var>f(R) = </var> ( <var>R</var> 内のマスに書かれた整数の総和 ) <var>\times</var> ( <var>R</var> 内のマスに書かれた整数の最小値 ) として達成可能な最大値を求めてください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li>入力は全て整数</li>
+<li><var>1 \le N,M \le 300</var></li>
+<li><var>1 \le A_{i,j} \le 300</var></li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var> <var>M</var>
+<var>A_{1,1}</var> <var>A_{1,2}</var> <var>\dots</var> <var>A_{1,M}</var>
+<var>A_{2,1}</var> <var>A_{2,2}</var> <var>\dots</var> <var>A_{2,M}</var>
+<var>\vdots</var>
+<var>A_{N,1}</var> <var>A_{N,2}</var> <var>\dots</var> <var>A_{N,M}</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>答えを整数として出力せよ。</p>
+</section>

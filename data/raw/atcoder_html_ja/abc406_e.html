@@ -1,0 +1,79 @@
+
+<p>配点 : <var>450</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>正の整数 <var>N,K</var> が与えられます。<br />
+<var>N</var> 以下の正の整数 <var>x</var> であって、次の条件をみたすものの <strong>総和</strong> を <var>998244353</var> で割った余りを求めてください。</p>
+<ul>
+<li><var>x</var> の popcount の値はちょうど <var>K</var> である。</li>
+</ul>
+<p><var>T</var> 個のテストケースが与えられるので、それぞれについて答えを求めてください。</p>
+<details>
+<summary>popcount とは</summary>
+正整数 <var>y</var> に対して、<var>y</var> の popcount の値 <var>\mathrm{popcount}(y)</var> は、<var>y</var> を二進数表記したとき <var>1</var> となっている桁の個数を表します。
+例えば、<var>\mathrm{popcount}(5)=2</var>, <var>\mathrm{popcount}(16)=1</var>, <var>\mathrm{popcount}(25)=3</var> です。
+</details>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1\leq T\leq 100</var></li>
+<li><var>1\leq N &lt; 2^{60}</var></li>
+<li><var>1\leq K \leq 60</var></li>
+<li><var>T,N,K</var> は整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>T</var>
+<var>\mathrm{case}_1</var>
+<var>\mathrm{case}_2</var>
+<var>\vdots</var>
+<var>\mathrm{case}_T</var>
+</pre>
+
+<p><var>\mathrm{case}_i</var> は <var>i</var> 番目のテストケースを表す。
+各テストケースは以下の形式で与えられる。</p>
+<pre><var>N</var> <var>K</var>
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p><var>T</var> 行出力せよ。<var>i</var> 行目 <var>(1\leq i\leq T)</var> には <var>i</var> 番目のテストケースに対する答えを出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>2
+20 2
+1234567890 17
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>100
+382730918
+</pre>
+
+<p><var>1</var> 番目のテストケースについて、<var>20</var> 以下の正の整数のうち、popcount の値が <var>2</var> であるものは <var>3,5,6,9,10,12,17,18,20</var> の <var>9</var> つであり、その総和は <var>100</var> となります。<br />
+<var>100</var> を <var>998244353</var> で割った余りは <var>100</var> であるため、<var>1</var> 行目には <var>100</var> を出力します。<br />
+<var>998244353</var> で割った余りを出力する必要があることに注意してください。</p></section>
+</div>

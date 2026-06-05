@@ -1,0 +1,16 @@
+rank,tag,problem_count,slot_scope,problems_in_scope,share_pct
+1,implementation,230,all,644,35.71
+2,dp,107,all,644,16.61
+3,string,102,all,644,15.84
+4,simulation,80,all,644,12.42
+5,greedy,75,all,644,11.65
+6,counting,66,all,644,10.25
+7,modular arithmetic,64,all,644,9.94
+8,sorting,55,all,644,8.54
+9,math,53,all,644,8.23
+10,combinatorics,52,all,644,8.07
+11,prefix sum,43,all,644,6.68
+12,grid,42,all,644,6.52
+13,brute force,40,all,644,6.21
+14,binary search,40,all,644,6.21
+15,graph theory,35,all,644,5.43

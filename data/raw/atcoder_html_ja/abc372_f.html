@@ -1,0 +1,118 @@
+
+<p>配点 : <var>525</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p><var>N</var> 頂点 <var>N+M</var> 辺の単純有向グラフ <var>G</var> があります。頂点には <var>1</var> から <var>N</var> の番号が、辺には <var>1</var> から <var>N+M</var> までの番号がつけられています。</p>
+<p>辺 <var>i</var> <var>(1 \leq i \leq N)</var> は頂点 <var>i</var> から頂点 <var>i+1</var> へ張られています。（ただし、頂点 <var>N+1</var> は頂点 <var>1</var> とみなします。）<br>
+辺 <var>N+i\ (1\leq i\leq M)</var> は頂点 <var>X_i</var> から頂点 <var>Y_i</var> へ張られています。</p>
+<p>高橋君は頂点 <var>1</var> にいます。各頂点において、高橋君はその頂点から有向辺が張られている頂点に移動することができます。</p>
+<p>高橋君がちょうど <var>K</var> 回移動する方法が何通りあるかを求めてください。</p>
+<p>すなわち、長さ <var>K+1</var> の 整数列 <var>(v_0,v_1,\dots,v_K)</var> であって、下記の <var>3</var> つの条件をすべて満たすものの個数を求めてください。</p>
+<ul>
+<li><var>i=0,1,\dots,K</var> について、<var>1\leq v_i\leq N</var></li>
+<li><var>v_0=1</var></li>
+<li><var>i=1,2,\ldots,K</var> について、頂点 <var>v_{i-1}</var> から頂点 <var>v_i</var> へ有向辺が張られている。</li>
+</ul>
+<p>ただし、答えは非常に大きくなることがあるので、答えを <var>998244353</var> で割った余りを出力してください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var> 2\leq N\leq 2\times 10^5</var></li>
+<li><var>0\leq M\leq 50</var></li>
+<li><var>1\leq K\leq 2\times 10^5</var></li>
+<li><var> 1\leq X_i,Y_i\leq N,X_i\neq Y_i</var></li>
+<li><var>N+M</var> 本の有向辺はすべて異なる</li>
+<li>入力は全て整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var> <var>M</var> <var>K</var>
+<var>X_1</var> <var>Y_1</var>
+<var>X_2</var> <var>Y_2</var>
+<var>\vdots</var>
+<var>X_M</var> <var>Y_M</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>答えを <var>998244353</var> で割った余りを出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>6 2 5
+1 4
+2 5
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>5
+</pre>
+<p><img alt="sample1" src="https://img.atcoder.jp/abc372/7a174918a45bdbdfb3457d9c62bea943.png" /></p>
+<p>上図はグラフ <var>G</var> を表しています。以下の <var>5</var> 通りの移動方法が存在します。</p>
+<ul>
+<li>頂点 <var>1\to</var> 頂点 <var>2\to</var> 頂点 <var>3\to</var> 頂点 <var>4\to</var> 頂点 <var>5\to</var> 頂点 <var>6</var></li>
+<li>頂点 <var>1\to</var> 頂点 <var>2\to</var> 頂点 <var>5\to</var> 頂点 <var>6\to</var> 頂点 <var>1\to</var> 頂点 <var>2</var></li>
+<li>頂点 <var>1\to</var> 頂点 <var>2\to</var> 頂点 <var>5\to</var> 頂点 <var>6\to</var> 頂点 <var>1\to</var> 頂点 <var>4</var></li>
+<li>頂点 <var>1\to</var> 頂点 <var>4\to</var> 頂点 <var>5\to</var> 頂点 <var>6\to</var> 頂点 <var>1\to</var> 頂点 <var>2</var></li>
+<li>頂点 <var>1\to</var> 頂点 <var>4\to</var> 頂点 <var>5\to</var> 頂点 <var>6\to</var> 頂点 <var>1\to</var> 頂点 <var>4</var></li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>10 0 200000
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>1
+</pre>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>199 10 1326
+122 39
+142 49
+164 119
+197 127
+188 145
+69 80
+6 120
+24 160
+18 154
+185 27
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>451022766
+</pre></section>
+</div>

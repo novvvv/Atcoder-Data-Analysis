@@ -1,0 +1,120 @@
+
+<p>配点 : <var>600</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p><var>N</var> 頂点 <var>M</var> 辺の有向グラフがあります。
+頂点には <var>1</var> から <var>N</var> までの番号が付けられていて、<var>i</var> 番目の辺は頂点 <var>U_i</var> から頂点 <var>V_i</var> に向かって伸びています。</p>
+<p>あなたは今頂点 <var>1</var> にいます。
+以下の行動をちょうど <var>10^{10^{100}}</var> 回繰り返して頂点 <var>1</var> に戻ってくることが可能かどうか判定してください。</p>
+<ul>
+<li>今いる頂点から伸びている辺を <var>1</var> つ選び、その辺が伸びている先の頂点に移動する。</li>
+</ul>
+<p><var>T</var> 個のテストケースが与えられるので、それぞれについて解いてください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li>入力は全て整数</li>
+<li><var>1\leq T \leq 2\times 10^5</var></li>
+<li><var>2\leq N \leq 2\times 10^5</var></li>
+<li><var>1\leq M \leq 2\times 10^5</var></li>
+<li>全てのテストケースにおける <var>N</var> の総和は <var>2 \times 10^5</var> 以下</li>
+<li>全てのテストケースにおける <var>M</var> の総和は <var>2 \times 10^5</var> 以下</li>
+<li><var>1 \leq U_i, V_i \leq N</var></li>
+<li><var>U_i \neq V_i</var></li>
+<li><var>i\neq j</var> ならば <var>(U_i,V_i) \neq (U_j,V_j)</var></li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。
+ここで <var>\text{test}_i</var> は <var>i</var> 番目のテストケースを意味する。</p>
+<pre><var>T</var>
+<var>\text{test}_1</var>
+<var>\text{test}_2</var>
+<var>\vdots</var>
+<var>\text{test}_T</var>
+</pre>
+<p>各テストケースは以下の形式で与えられる。</p>
+<pre><var>N</var> <var>M</var>
+<var>U_1</var> <var>V_1</var>
+<var>U_2</var> <var>V_2</var>
+<var>\vdots</var>
+<var>U_M</var> <var>V_M</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p><var>T</var> 行出力せよ。</p>
+<p><var>i\ (1\leq i \leq T)</var> 行目には、
+<var>i</var> 番目のテストケースにおいて問題文中の行動をちょうど <var>10^{10^{100}}</var> 回繰り返して頂点 <var>1</var> に戻ってくることが可能ならば <code>Yes</code> を、
+そうでないならば <code>No</code> を出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>4
+2 2
+1 2
+2 1
+3 3
+1 2
+2 3
+3 1
+7 10
+1 6
+6 3
+1 4
+5 1
+7 1
+4 5
+2 1
+4 7
+2 7
+4 3
+7 11
+1 6
+6 3
+1 4
+5 1
+7 1
+4 5
+2 1
+4 7
+2 7
+4 3
+3 7
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>Yes
+No
+No
+Yes
+</pre>
+<p><var>1</var> 番目のテストケースについて、</p>
+<ul>
+<li>頂点 <var>1 \rightarrow 2 \rightarrow 1 \rightarrow \dots</var> という移動を繰り返す以外の選択肢はありません。
+このとき、<var>10^{10^{100}}</var> 回の移動をした時点で頂点 <var>1</var> にいるので、答えは <code>Yes</code> です。</li>
+</ul>
+<p><var>2</var> 番目のテストケースについて、</p>
+<ul>
+<li>頂点 <var>1 \rightarrow 2 \rightarrow 3 \rightarrow 1 \rightarrow \dots</var> という移動を繰り返す以外の選択肢はありません。
+  このとき、<var>10^{10^{100}}</var> 回の移動をした時点で頂点 <var>2</var> にいるので、答えは <code>No</code> です。</li>
+</ul></section>
+</div>

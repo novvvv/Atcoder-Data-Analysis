@@ -1,0 +1,115 @@
+
+<p>配点 : <var>300</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p><var>N</var> 行 <var>N</var> 列のマス目があり、それぞれのマスは白または黒で塗られています。<br />
+マス目の状態は <var>N</var> 個の文字列 <var>S_i</var> で表され、
+<var>S_i</var> の <var>j</var> 文字目が <code>#</code> であることはマス目の上から <var>i</var> 行目、左から <var>j</var> 列目のマスが黒く塗られていることを、
+<code>.</code> であることは白く塗られていることをさします。</p>
+<p>高橋君はこのマス目のうち高々 <var>2</var> つの白く塗られているマスを選び、黒く塗ることができます。<br />
+マス目の中に、黒く塗られたマスが縦、横、ななめのいずれかの向きに <var>6</var> つ以上連続するようにできるか判定してください。<br />
+ただし、黒く塗られたマスがななめに <var>6</var> つ以上連続するとは、<var>N</var> 行 <var>N</var> 列のマス目に完全に含まれる <var>6</var> 行 <var>6</var> 列のマス目であって、その少なくとも一方の対角線上のマスがすべて黒く塗られているようなものが存在する事をさします。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>6 \leq N \leq 1000</var></li>
+<li><var>\lvert S_i\rvert =N</var></li>
+<li><var>S_i</var> は <code>#</code> と <code>.</code> のみからなる。</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var>
+<var>S_1</var>
+<var>S_2</var>
+<var>\vdots</var>
+<var>S_N</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>高々 <var>2</var> つのマス目を黒く塗ることで条件をみたすようにできるなら <code>Yes</code> を、そうでないならば <code>No</code> を出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>8
+........
+........
+.#.##.#.
+........
+........
+........
+........
+........
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>Yes
+</pre>
+<p>上から <var>3</var> 行目の左から <var>3</var>, <var>6</var> 番目のマスを塗ることで横方向に <var>6</var> つの黒く塗られたマスを連続させることができます。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>6
+######
+######
+######
+######
+######
+######
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>Yes
+</pre>
+<p>高橋君はマス目を新たに黒く塗ることはできませんが、すでにこのマス目は条件をみたしています。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>10
+..........
+#..##.....
+..........
+..........
+....#.....
+....#.....
+.#...#..#.
+..........
+..........
+..........
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>No
+</pre></section>
+</div>

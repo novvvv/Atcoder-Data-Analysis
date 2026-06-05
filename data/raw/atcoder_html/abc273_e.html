@@ -1,0 +1,60 @@
+
+			
+
+
+	
+	
+
+			<span class="lang">
+<span class="lang-ja">
+<p>配点 : <var>500</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>整数列 <var>A</var> とノートがあります。ノートには <var>10^9</var> 枚のページがあります。</p>
+<p><var>Q</var> 個のクエリが与えられます。各クエリは下記の <var>4</var> 種類のいずれかです。</p>
+<pre>ADD <var>x</var> : 整数 <var>x</var> を <var>A</var> の末尾に追加する。
+</pre>
+<pre>DELETE : <var>A</var> の末尾の要素を削除する。ただし、<var>A</var> が空である場合は何もしない。
+</pre>
+<pre>SAVE <var>y</var> : ノートの <var>y</var> ページ目に書かれている数列を消し、代わりに現在の <var>A</var> を <var>y</var> ページ目に書き込む。
+</pre>
+<pre>LOAD <var>z</var> : <var>A</var> をノートの <var>z</var> ページ目に書かれている数列で置き換える。
+</pre>
+<p>はじめ、<var>A</var> は空列であり、ノートのすべてのページには空列の情報が書かれています。
+その初期状態から、<var>Q</var> 個のクエリを与えられる順に実行し、各クエリの実行直後における <var>A</var> の末尾の要素を出力してください。</p>
+<p>なお、入出力の量が多くなる場合があるので、高速な方法で入出力を行うことを推奨します。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1 \leq Q \leq 5 \times 10^5</var></li>
+<li><var>1 \leq x, y, z \leq 10^9</var></li>
+<li><var>Q, x, y, z</var> は整数</li>
+<li>与えられるクエリは問題文中の <var>4</var> 種類のいずれか</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>Q</var>
+<var>\mathrm{query}_1</var>
+<var>\mathrm{query}_2</var>
+<var>\vdots</var>
+<var>\mathrm{query}_Q</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>下記の形式にしたがい、<var>i = 1, 2, \ldots, Q</var> について、<var>i</var> 番目までのクエリを実行した直後の <var>A</var> の末尾の要素 <var>X_i</var> を（ <var>A</var> が空の場合は <var>X_i := -1</var> とする）出力せよ。</p>
+<pre><var>X_1</var> <var>X_2</var> <var>\ldots</var> <var>X_Q</var>
+</pre>
+</section>

@@ -1,0 +1,145 @@
+
+<p>配点 : <var>400</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><blockquote>
+<p>高橋君はあるサービスで使うユーザー名を決めるのに困っています。彼を助けるプログラムを書いてください。</p>
+</blockquote>
+<p>以下の条件をすべて満たす文字列 <var>X</var> を <var>1</var> つ求めてください。</p>
+<ul>
+<li><var>X</var> は次の手順で得られる文字列である。<ul>
+<li><var>N</var> 個の文字列 <var>S_1,S_2,\ldots,S_N</var> を好きな順番で並べたものを <var>S_1', S_2', \ldots,S_N'</var> とする。そして、<var>S_1'</var>、( <var>1</var> 個以上の <code>_</code> )、<var>S_2'</var>、( <var>1</var> 個以上の <code>_</code> )、<var>\ldots</var>、( <var>1</var> 個以上の <code>_</code> )、<var>S_N'</var> をこの順番で連結したものを <var>X</var> とする。</li>
+</ul>
+</li>
+<li><var>X</var> の文字数は <var>3</var> 以上 <var>16</var> 以下である。</li>
+<li><var>X</var> は <var>M</var> 個の文字列 <var>T_1,T_2,\ldots,T_M</var> のいずれとも一致しない。</li>
+</ul>
+<p>ただし、条件をすべて満たす文字列 <var>X</var> が存在しない場合は代わりに <code>-1</code> と出力してください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1 \leq N \leq 8</var></li>
+<li><var>0 \leq M \leq 10^5</var></li>
+<li><var>N,M</var> は整数</li>
+<li><var>1 \leq |S_i| \leq 16</var></li>
+<li><var>N-1+\sum{|S_i|} \leq 16</var></li>
+<li><var>i \neq j</var> ならば <var>S_i \neq S_j</var></li>
+<li><var>S_i</var> は英小文字のみからなる文字列</li>
+<li><var>3 \leq |T_i| \leq 16</var></li>
+<li><var>i \neq j</var> ならば <var>T_i \neq T_j</var></li>
+<li><var>T_i</var> は英小文字と <code>_</code> のみからなる文字列</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var> <var>M</var>
+<var>S_1</var>
+<var>S_2</var>
+<var>\vdots</var>
+<var>S_N</var>
+<var>T_1</var>
+<var>T_2</var>
+<var>\vdots</var>
+<var>T_M</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>条件をすべて満たす文字列 <var>X</var> を <var>1</var> つ出力せよ。ただし、条件をすべて満たす文字列 <var>X</var> が存在しない場合は代わりに <code>-1</code> を出力せよ。<br />
+答えが複数存在する場合、どれを出力しても良い。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>1 1
+chokudai
+chokudai
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>-1
+</pre>
+<p>条件のうち <var>1</var> 番目と <var>2</var> 番目を満たす文字列は <var>X=</var> <code>chokudai</code> しかありませんが、これは <var>T_1</var> と一致します。<br />
+このため、条件をすべて満たす文字列 <var>X</var> が存在せず、<code>-1</code> が正しい出力となります。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>2 2
+choku
+dai
+chokudai
+choku_dai
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>dai_choku
+</pre>
+<p>この他に、<code>choku__dai</code> (<code>choku</code> と <code>dai</code> の間の <code>_</code> が <var>2</var> つ) 等も条件をすべて満たします。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>2 2
+chokudai
+atcoder
+chokudai_atcoder
+atcoder_chokudai
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>-1
+</pre>
+<p><code>chokudai__atcoder</code> や <code>atcoder__chokudai</code> (<code>chokudai</code> と <code>atcoder</code> の間の <code>_</code> が <var>2</var> つ)は文字数が <var>17</var> なので <var>2</var> 番目の条件を満たしません。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 4</h3><pre>4 4
+ab
+cd
+ef
+gh
+hoge
+fuga
+____
+_ab_cd_ef_gh_
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 4</h3><pre>ab__ef___cd_gh
+</pre>
+<p><var>1</var> 番目の条件で記述されている操作で得られないような文字列が <var>T_i</var> として与えられる場合があります。</p></section>
+</div>

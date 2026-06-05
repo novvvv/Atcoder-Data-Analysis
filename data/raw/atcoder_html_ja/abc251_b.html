@@ -1,0 +1,113 @@
+
+<p>配点 : <var>200</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>おもり <var>1</var>, おもり <var>2</var>, <var>\dots</var>, おもり <var>N</var> の <var>N</var> 個のおもりがあります。おもり <var>i</var> の重さは <var>A_i</var> です。<br />
+以下の条件を満たす正整数 <var>n</var> を <strong>良い整数</strong> と呼びます。</p>
+<ul>
+<li><var>\bf{3}</var> <strong>個以下</strong> の異なるおもりを自由に選んで、選んだおもりの重さの和を <var>n</var> にすることができる。</li>
+</ul>
+<p><var>W</var> 以下の正整数のうち、良い整数は何個ありますか？</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1 \leq N \leq 300</var></li>
+<li><var>1 \leq W \leq 10^6</var></li>
+<li><var>1 \leq A_i \leq 10^6</var></li>
+<li>入力される値はすべて整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var> <var>W</var>
+<var>A_1</var> <var>A_2</var> <var>\dots</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>答えを出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>2 10
+1 3
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>3
+</pre>
+<p>おもり <var>1</var> のみを選ぶと重さの和は <var>1</var> になります。よって <var>1</var> は良い整数です。<br />
+おもり <var>2</var> のみを選ぶと重さの和は <var>3</var> になります。よって <var>3</var> は良い整数です。<br />
+おもり <var>1</var> とおもり <var>2</var> を選ぶと重さの和は <var>4</var> になります。よって <var>4</var> は良い整数です。<br />
+これら以外に良い整数は存在しません。また、<var>1,3,4</var> のいずれも <var>W</var> 以下の整数です。よって答えは <var>3</var> 個になります。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>2 1
+2 3
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>0
+</pre>
+<p><var>W</var> 以下の良い整数は存在しません。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>4 12
+3 3 3 3
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>3
+</pre>
+<p>良い整数は <var>3,6,9</var> の <var>3</var> 個です。<br />
+たとえばおもり <var>1</var>, おもり <var>2</var>, おもり <var>3</var> を選ぶと重さの和は <var>9</var> になるので、<var>9</var> は良い整数です。<br />
+<var>12</var> は良い整数 <strong>ではない</strong> ことに注意してください。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 4</h3><pre>7 251
+202 20 5 1 4 2 100
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 4</h3><pre>48
+</pre></section>
+</div>

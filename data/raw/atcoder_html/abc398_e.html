@@ -1,0 +1,196 @@
+
+			
+
+
+	
+	
+
+			<span class="lang">
+<span class="lang-ja">
+<p>配点 : <var>425</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>この問題は <strong>インタラクティブな問題</strong> （あなたの作成したプログラムとジャッジシステムが入出力を介して対話を行う形式の問題）です。</p>
+<p><var>1</var> から <var>N</var> の番号がついた <var>N</var> 頂点からなる木 <var>G</var> が与えられます。<var>i</var> 番目の辺は頂点 <var>U_i</var> と頂点 <var>V_i</var> を結んでいます。</p>
+<p>この木 <var>G</var> を使って、あなたと高橋君がゲームをします。まず、あなたは先手後手を決めます。その後、先手から順に交互に以下の操作を行います。</p>
+<ul>
+<li><var>1 \leq i &lt; j \leq N</var> を満たす整数の組 <var>(i,j)</var> であって、以下の条件をともに満たすものを選び、頂点 <var>i</var> と頂点 <var>j</var> を結ぶ辺を <var>G</var> に追加する。<ul>
+<li><var>G</var> は頂点 <var>i</var> と頂点 <var>j</var> を結ぶ辺を持たない</li>
+<li>頂点 <var>i</var> と頂点 <var>j</var> を結ぶ辺を <var>G</var> に追加しても、奇閉路ができない</li>
+</ul>
+</li>
+</ul>
+<p>操作を行えなくなった方が負けであり、負けでない方が勝ちです。実際に高橋君とゲームをして勝ってください。</p>
+<details>
+<summary>奇閉路とは？</summary>
+<p><var>G</var> の頂点の列 <var>(v_0,v_1,\ldots,v_k)</var> が以下の条件を全て満たすとき、かつ、そのときに限りこの列を <var>G</var> の奇閉路といいます。</p>
+<ul>
+  <li> <var>k</var> は奇数である。 </li>
+  <li> <var>v_0=v_k</var> である。 </li>
+  <li> 全ての <var>1\leq i \leq k</var> に対して、<var>v_{i-1}</var> と <var>v_{i}</var> を結ぶ辺が存在する。 </li>
+</ul>
+</details>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>2 \leq N \leq 100</var></li>
+<li><var>1 \leq U_i &lt; V_i \leq N</var></li>
+<li>与えられるグラフは木である</li>
+<li>入力は全て整数である</li>
+</ul>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>入出力</h3><p>この問題はインタラクティブな問題（あなたの作成したプログラムとジャッジシステムが入出力を介して対話を行う形式の問題）です。</p>
+<p>最初に、<var>N</var> および <var>G</var> の情報を標準入力から受け取ってください。以下の形式で与えられます。</p>
+<pre><var>N</var>
+<var>U_1</var> <var>V_1</var>
+<var>U_2</var> <var>V_2</var>
+<var>\vdots</var>
+<var>U_{N-1}</var> <var>V_{N-1}</var>
+</pre>
+<p>次に、あなたが先手と後手のどちらを選ぶか決めてください。先手を選ぶ場合 <code>First</code>、後手を選ぶ場合 <code>Second</code> と標準出力に出力してください。</p>
+<p>その後ゲームが始まります。</p>
+<p>あなたの手番では、操作のために選んだ整数の組 <var>(i,j)</var> を、<var>i,j</var> の順に空白区切りで標準出力に出力してください。</p>
+<pre><var>i</var> <var>j</var>
+</pre>
+<p>高橋君の手番では、<var>2</var> つの整数 <var>i,j</var> が順に空白区切りで標準入力に与えられます。</p>
+<pre><var>i</var> <var>j</var>
+</pre>
+<p><var>(i,j)=(-1,-1)</var> のとき、あなたがゲームに勝利しゲームが終了したことを意味します。この場合、直ちにプログラムを終了してください。<br />
+それ以外のとき、<var>(i,j)</var> は高橋君が操作のために選んだ整数の組を表します。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>注意点</h3><ul>
+<li><b><span style = "color:red">出力を行うたびに、末尾に改行を入れて標準出力を flush してください。そうしなかった場合、ジャッジ結果が <span class="label label-warning" data-toggle="tooltip" data-placement="top" title="" data-original-title="実行時間制限超過">TLE</span> となる可能性があります。</span></b></li>
+<li><strong>対話の途中で誤った出力形式による出力を行った、あるいはプログラムが途中で終了した場合のジャッジ結果は不定です。</strong></li>
+<li>ゲームが終了したらただちにプログラムを終了してください。そうしない場合、ジャッジ結果は不定です。</li>
+</ul>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>入出力例</h3><table class="table table-bordered">
+<thead> <tr> <th>入力</th> <th>出力</th> <th>説明</th> </tr> </thead>
+<tbody> <tr> <td><code>4</br>1 2</br>2 3</br>3 4</code></td> <td></td> <td>まず整数 <var>N</var> および <var>G</var> の情報が与えられます。</td> </tr>
+<tr> <td></td> <td><code>First</code></td> <td>あなたは先手を選びました。</td> </tr>
+<tr> <td></td> <td><code>1 4</code></td> <td>あなたは <var>(1,4)</var> に対して操作を行いました。</td> </tr>
+<tr> <td><code>-1 -1</code></td> <td></td> <td>高橋君が操作を行えなくなったためゲームを終了します。ジャッジ結果は <span class='label label-success' aria-hidden='true' data-toggle='tooltip' data-placement='top' title="正解">AC</span> になります。</td> </tr> </tbody>
+</table></section>
+</div>
+</span>
+<span class="lang-en">
+<p>Score : <var>425</var> points</p>
+
+<div class="part">
+<section>
+<h3>Problem Statement</h3><p>This problem is an <strong>interactive problem</strong> (in which your program and the judge system communicate via input and output).</p>
+<p>You are given a tree <var>G</var> with <var>N</var> vertices numbered <var>1</var> to <var>N</var>. The <var>i</var>-th edge connects vertices <var>U_i</var> and <var>V_i</var>.</p>
+<p>You will play a game with Takahashi using this tree <var>G</var>. First, you decide who is first and who is second. Then, starting from the first player, take turns performing the following operation:</p>
+<ul>
+<li>Choose a pair of integers <var>(i,j)</var> with <var>1 \leq i &lt; j \leq N</var> that satisfies both of the following conditions, then add an edge connecting vertices <var>i</var> and <var>j</var> to <var>G</var>.<ul>
+<li><var>G</var> does not already have an edge connecting vertices <var>i</var> and <var>j</var>.</li>
+<li>Adding an edge connecting vertices <var>i</var> and <var>j</var> does not create an odd cycle.</li>
+</ul>
+</li>
+</ul>
+<p>A player who cannot perform this operation loses, and the other player wins. Play this game against Takahashi and win.</p>
+<details>
+<summary>What is an odd cycle?</summary>
+<p>A sequence of vertices <var>(v_0,v_1,\ldots,v_k)</var> of <var>G</var> is called an odd cycle if and only if all of the following conditions are satisfied:</p>
+<ul>
+  <li><var>k</var> is odd.</li>
+  <li><var>v_0=v_k</var>.</li>
+  <li>For every <var>1\leq i \leq k</var>, there is an edge connecting <var>v_{i-1}</var> and <var>v_{i}</var>.</li>
+</ul>
+</details>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>Constraints</h3><ul>
+<li><var>2 \leq N \leq 100</var></li>
+<li><var>1 \leq U_i &lt; V_i \leq N</var></li>
+<li>The given graph is a tree.</li>
+<li>All input values are integers.</li>
+</ul>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>Interaction</h3><p>This is an interactive problem (in which your program and the judge system communicate via input and output).</p>
+<p>First, read <var>N</var> and the edges of <var>G</var> from Standard Input, given in the following format:</p>
+<pre><var>N</var>
+<var>U_1</var> <var>V_1</var>
+<var>U_2</var> <var>V_2</var>
+<var>\vdots</var>
+<var>U_{N-1}</var> <var>V_{N-1}</var>
+</pre>
+<p>Then, decide whether you go first or second. If you choose first, print <code>First</code>; if second, print <code>Second</code>.</p>
+<p>Then, the game begins.</p>
+<p>On your turn, output the chosen pair <var>(i,j)</var> by printing two integers <var>i</var> and <var>j</var> in this order, separated by a space:</p>
+<pre><var>i</var> <var>j</var>
+</pre>
+<p>On Takahashi's turn, two integers <var>i,j</var> will be given in order, separated by a space, via Standard Input:</p>
+<pre><var>i</var> <var>j</var>
+</pre>
+<p>If <var>(i,j)=(-1,-1)</var>, it means he can no longer make a move and you win. Immediately terminate your program in this case.<br />
+Otherwise, <var>(i,j)</var> is the pair of integers he has chosen.</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>Notes</h3><ul>
+<li><b><span style = "color:red">After each output, be sure to print a newline and flush Standard Output. Otherwise, you may get <span class="label label-warning" data-toggle="tooltip" data-placement="top" title="" data-original-title="Time Limit Exceeded">TLE</span>.</span></b></li>
+<li><strong>If you produce output in an incorrect format or your program ends prematurely, the judge result is indeterminate.</strong></li>
+<li>Once the game finishes, terminate your program immediately. Otherwise, the judge result is indeterminate.</li>
+</ul>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>Sample Interaction</h3><table class="table table-bordered">
+<thead> <tr> <th>Input</th> <th>Output</th> <th>Explanation</th> </tr> </thead>
+<tbody>
+<tr>
+  <td><code>4</br>1 2</br>2 3</br>3 4</code></td>
+  <td></td>
+  <td>First, you receive <var>N</var> and the edges of <var>G</var>.</td>
+</tr>
+<tr>
+  <td></td>
+  <td><code>First</code></td>
+  <td>You choose to go first.</td>
+</tr>
+<tr>
+  <td></td>
+  <td><code>1 4</code></td>
+  <td>You add an edge between vertices <var>1</var> and <var>4</var>.</td>
+</tr>
+<tr>
+  <td><code>-1 -1</code></td>
+  <td></td>
+  <td>Takahashi can no longer move, so you win. The judge result will be <span class='label label-success' aria-hidden='true' data-toggle='tooltip' data-placement='top' title="Accepted">AC</span>.</td>
+</tr>
+</table></section>
+</div>
+</span>
+</span>
+
+		

@@ -1,0 +1,49 @@
+
+			
+
+
+	
+	
+
+			<span class="lang">
+<span class="lang-ja">
+<p>配点 : <var>250</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p><var>1,2,\dots,N</var> がちょうど <var>3</var> 回ずつ現れる長さ <var>3N</var> の数列 <var>A=(A_1,A_2,\dots,A_{3N})</var> が与えられます。</p>
+<p><var>i=1,2,\dots,N</var> について、<var>A</var> の中にある <var>i</var> のうち真ん中にあるものの添字を <var>f(i)</var> と定めます。
+<var>1,2,\dots,N</var> を <var>f(i)</var> の昇順に並べ替えてください。</p>
+<p><var>f(i)</var> の定義は厳密には以下の通りです。</p>
+<ul>
+<li><var>A_j = i</var> を満たす <var>j</var> が <var>j=\alpha,\beta,\gamma\ (\alpha &lt; \beta &lt; \gamma)</var> であるとする。このとき、<var>f(i) = \beta</var> である。</li>
+</ul>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1\leq N \leq 10^5</var></li>
+<li><var>1 \leq A_j \leq N</var></li>
+<li><var>i=1,2,\dots,N</var> それぞれについて、<var>A</var> の中に <var>i</var> はちょうど <var>3</var> 回現れる</li>
+<li>入力は全て整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>\dots</var> <var>A_{3N}</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p><var>1,2,\dots,N</var> を <var>f(i)</var> の昇順に並べ替えてできる長さ <var>N</var> の数列を空白区切りで出力せよ。</p>
+</section>

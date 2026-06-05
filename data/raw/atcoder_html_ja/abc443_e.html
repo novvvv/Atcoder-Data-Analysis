@@ -1,0 +1,129 @@
+
+<p>配点 : <var>450</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p><var>N \times N</var> のマス目があります。このマス目の上から <var>i</var> 行目、左から <var>j</var> 列目を <var>(i,j)</var> と呼びます。<br />
+マス目の情報は <var>N</var> 個の文字列 <var>S_1,S_2,\dots,S_N</var> として与えられ、 <var>S_i</var> の <var>j</var> 文字目が <code>.</code> のとき <var>(i,j)</var> は空きマス、 <code>#</code> のとき <var>(i,j)</var> は壁マスです。</p>
+<p>はじめ、高橋君は空きマス <var>(N,C)</var> におり、以下の移動を <var>N-1</var> 回繰り返します。</p>
+<ul>
+<li>現在高橋君が <var>(r,c)</var> にいるとき、 <var>(r-1,c-1),(r-1,c),(r-1,c+1)</var> のいずれかを移動先として指定する。但し、マス目中に存在しないマスを移動先として指定することはできない。</li>
+<li>もし移動先 <var>(a,b)</var> が壁マスである場合、以下のことが起こる。<ul>
+<li>現時点で <var>a &lt; i \le N</var> を満たす全ての整数について <var>(i,b)</var> が空きマスであった場合、 <var>(a,b)</var> にある壁を破壊し、移動する。すなわち、 <var>(a,b)</var> は空きマスになり、高橋君は <var>(a,b)</var> に移動する。</li>
+<li>そうでない場合、高橋君は移動に失敗する。この場合、移動が <var>N-1</var> 回に満たなくとも直ちに移動の繰り返しを終了する。</li>
+</ul>
+</li>
+<li>もし移動先 <var>(a,b)</var> が空きマスである場合、高橋君は <var>(a,b)</var> に移動する。</li>
+</ul>
+<p>以下の条件を満たす長さ <var>N</var> の文字列 <var>R</var> を出力してください。</p>
+<ul>
+<li>もし移動中に失敗せず <var>(1,i)</var> に辿り着ける場合、 <var>R</var> の <var>i</var> 文字目は <code>1</code></li>
+<li>そうでない場合、 <var>R</var> の <var>i</var> 文字目は <code>0</code></li>
+</ul>
+<p><var>T</var> 個のテストケースが与えられるので、それぞれについて答えを求めてください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>T,N,C</var> は整数</li>
+<li><var>1 \le T \le 50000</var></li>
+<li><var>2 \le N \le 3000</var></li>
+<li><var>1 \le C \le N</var></li>
+<li><var>S_i</var> は <code>.</code> と <code>#</code> からなる長さ <var>N</var> の文字列</li>
+<li><var>S_N</var> の <var>C</var> 文字目は <code>.</code></li>
+<li>ひとつの入力について、 <var>N^2</var> の総和は <var>9 \times 10^6</var> を超えない</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>T</var>
+<var>\text{case}_1</var>
+<var>\text{case}_2</var>
+<var>\vdots</var>
+<var>\text{case}_T</var>
+</pre>
+
+<p>各テストケースは以下の形式で与えられる。</p>
+<pre><var>N</var> <var>C</var>
+<var>S_1</var>
+<var>S_2</var>
+<var>\vdots</var>
+<var>S_N</var>
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p><var>T</var> 行出力せよ。</p>
+<p><var>i</var> 行目には <var>i</var> 番目のテストケースに対する答えを出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>5
+5 3
+.###.
+..#..
+#.#.#
+#...#
+##..#
+2 2
+##
+..
+4 1
+####
+####
+####
+.###
+3 3
+...
+...
+...
+10 3
+##.##.##.#
+.####..#..
+...#.#..#.
+.#.#.#.#..
+...####...
+#.#.##....
+.##...#...
+#.##.....#
+#....###.#
+.#..#.#...
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>10111
+11
+1000
+111
+0011010010
+</pre>
+
+<p>この入力には <var>5</var> 個のテストケースが含まれます。</p>
+<p><var>1</var> 番目のテストケースについて、例えば以下のようにして移動中に失敗せず <var>(1,3)</var> に辿り着くことができます。</p>
+<ul>
+<li>はじめ、高橋君は <var>(5,3)</var> にいる。</li>
+<li>空きマス <var>(4,2)</var> に移動する。</li>
+<li><var>(3,3)</var> は壁マスであるが、現時点で <var>(4,3),(5,3)</var> は共に空きマスであるため、高橋君は <var>(3,3)</var> にある壁を破壊して <var>(3,3)</var> に移動する。</li>
+<li><var>(2,3)</var> は壁マスであるが、現時点で <var>(3,3),(4,3),(5,3)</var> は共に空きマスであるため、高橋君は <var>(2,3)</var> にある壁を破壊して <var>(2,3)</var> に移動する。</li>
+<li><var>(1,3)</var> は壁マスであるが、現時点で <var>(2,3),(3,3),(4,3),(5,3)</var> は共に空きマスであるため、高橋君は <var>(1,3)</var> にある壁を破壊して <var>(1,3)</var> に移動する。</li>
+</ul>
+<p>移動中に失敗せず <var>(1,1),(1,3),(1,4),(1,5)</var> には辿り着くことができるので、 <code>10111</code> と出力してください。</p></section>
+</div>

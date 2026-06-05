@@ -1,0 +1,8 @@
+post_id,post_url,post_title,exam_year,round_label,track_label
+420,https://tech.kakao.com/posts/420,2021 카카오 신입공채 1차 온라인 코딩 테스트 for Tech developers 문제해설,2021,R1,recruitment
+448,https://tech.kakao.com/posts/448,2021 카카오 인턴십 for Tech developers 코딩 테스트 해설,2021,INTERN,internship
+488,https://tech.kakao.com/posts/488,2022 카카오 신입 공채 1차 온라인 코딩테스트 for Tech developers 문제해설,2022,R1,recruitment
+567,https://tech.kakao.com/posts/567,2023 카카오 신입 공채 1차 온라인 코딩 테스트 for Tech developers 문제해설,2023,R1,recruitment
+610,https://tech.kakao.com/posts/610,2024 카카오 겨울 인턴십 코딩테스트 문제해설,2024,INTERN,internship
+813,https://tech.kakao.com/posts/813,2026 카카오그룹 신입크루 공채 코딩테스트 1차 문제해설,2025,R1,recruitment
+814,https://tech.kakao.com/posts/814,2026 카카오그룹 신입크루 공채 코딩테스트 2차 문제해설,2025,R2,recruitment

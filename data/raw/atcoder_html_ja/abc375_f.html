@@ -1,0 +1,121 @@
+
+<p>配点 : <var>550</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>AtCoder国には <var>1</var> から <var>N</var> の番号がついた <var>N</var> 個の都市と、<var>1</var> から <var>M</var> の番号がついた <var>M</var> 本の道路があります。<br />
+道路 <var>i</var> は都市 <var>A_i</var> と都市 <var>B_i</var> を双方向に結び長さは <var>C_i</var> です。</p>
+<p><var>Q</var> 個のクエリが与えられるので順に処理してください。クエリは以下の <var>2</var> 種類のどちらかです。</p>
+<ul>
+<li><code>1 i</code>：道路 <var>i</var> が通行止めとなる。</li>
+<li><code>2 x y</code>：通行止めでない道路のみを通るときの都市 <var>x</var> から都市 <var>y</var> への最短距離を出力する。都市 <var>x</var> から都市 <var>y</var> に到達できないときは代わりに <code>-1</code> を出力する。</li>
+</ul>
+<p>なお、<var>1</var> 種類目のクエリはテストケースごとに <var>300</var> 回以下であることが保証されます。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>2 \leq N \leq 300</var></li>
+<li><var>0 \leq M \leq \frac{N(N-1)}{2}</var></li>
+<li><var>1\leq A_i &lt; B_i \leq N</var></li>
+<li><var>(A_i,B_i)</var> は相異なる</li>
+<li><var>1 \leq C_i \leq 10^9</var></li>
+<li><var>1 \leq Q \leq 2\times 10^5</var></li>
+<li><var>1</var> 種類目のクエリにおいて、<var>1\leq i \leq M</var></li>
+<li><var>1</var> 種類目のクエリにおいて与えられる道路は、その時点で通行止めでない</li>
+<li><var>1</var> 種類目のクエリは <var>300</var> 回以下である</li>
+<li><var>2</var> 種類目のクエリにおいて、<var>1\leq x &lt; y \leq N</var></li>
+<li>入力は全て整数である</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var> <var>M</var> <var>Q</var>
+<var>A_1</var> <var>B_1</var> <var>C_1</var>
+<var>\vdots</var>
+<var>A_M</var> <var>B_M</var> <var>C_M</var>
+<var>\mathrm{query}_1</var>
+<var>\vdots</var>
+<var>\mathrm{query}_Q</var>
+</pre>
+<p>各クエリは次の <var>2</var> 種類の形式のどちらかである。</p>
+<pre><var>1</var> <var>i</var>
+</pre>
+<pre><var>2</var> <var>x</var> <var>y</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>クエリを順に処理せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>3 3 5
+1 2 5
+1 3 10
+2 3 6
+2 1 3
+1 2
+2 1 3
+1 1
+2 1 3
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>10
+11
+-1
+</pre>
+<ul>
+<li><var>1</var> 番目のクエリでは、都市 <var>1</var> から都市 <var>3</var> への最短距離である <var>10</var> を出力します。</li>
+<li><var>2</var> 番目のクエリにより、道路 <var>2</var> が通行止めとなりました。</li>
+<li><var>3</var> 番目のクエリでは、都市 <var>1</var> から都市 <var>3</var> への最短距離である <var>11</var> を出力します。</li>
+<li><var>4</var> 番目のクエリにより、道路 <var>1</var> が通行止めとなりました。</li>
+<li><var>5</var> 番目のクエリでは、都市 <var>1</var> から都市 <var>3</var> には到達できないので、<code>-1</code> を出力します。</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>4 6 6
+2 3 1
+2 4 1
+3 4 1
+1 2 1
+1 3 1
+1 4 1
+1 4
+1 5
+1 6
+2 1 2
+2 1 3
+2 1 4
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>-1
+-1
+-1
+</pre></section>
+</div>

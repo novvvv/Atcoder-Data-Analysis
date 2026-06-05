@@ -1,0 +1,52 @@
+
+			
+
+
+	
+	
+
+			<span class="lang">
+<span class="lang-ja">
+<p>配点 : <var>525</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>右向きを <var>x</var> 軸正方向、上向きを <var>y</var> 軸正方向とする座標平面の原点にロボットがいます。ロボットは最初、<var>x</var> 軸正方向を向いています。</p>
+<p><var>i=1,\ldots,N</var> の順に以下の操作を行います：</p>
+<ul>
+<li>ロボットを右回りまたは左回りに <var>90</var> 度回転させる。その後、ロボットは向いている方向に <var>A_i</var> 進む</li>
+</ul>
+<p>回転方向を適切に選ぶことで、<var>N</var> 回の操作後にロボットがいる座標を <var>(X,Y)</var> にすることはできますか？</p>
+<p>できるならば、各操作において、右回りと左回りのどちらを選べばよいか求めてください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1 \leq N \leq 80</var></li>
+<li><var>1 \leq A_i \leq 10^7</var></li>
+<li><var>-10^9\leq X,Y \leq 10^9</var></li>
+<li>入力は全て整数である</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var> <var>X</var> <var>Y</var>
+<var>A_1</var> <var>\ldots</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p><var>N</var> 回の操作後にロボットがいる座標を <var>(X,Y)</var> にできないとき、<code>No</code> と出力せよ。<br />
+<var>N</var> 回の操作後にロボットがいる座標を <var>(X,Y)</var> にできるとき、1行目に <code>Yes</code> と出力し、2行目に次の条件を満たす長さ <var>N</var> の文字列 <var>S</var> を出力せよ。<br />
+条件： <var>S</var> は <code>L</code> または <code>R</code> のみからなり、<var>S</var> の <var>i</var> 番目の文字が <code>L</code> ならば <var>i</var> 回目の操作においてロボットを左回りに、<code>R</code> ならばロボットを右回りに回転させることで、<var>N</var> 回の操作後にロボットがいる座標を <var>(X,Y)</var> にできる。</p>
+<p>答えが複数ある場合はどれを出力しても正解となる。  </p>
+</section>

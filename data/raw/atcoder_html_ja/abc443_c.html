@@ -1,0 +1,111 @@
+
+<p>配点 : <var>300</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>AtCoder 社は時刻 <var>0</var> に始業し時刻 <var>T</var> に終業します。 時刻 <var>t</var> と時刻 <var>t+1</var> との間隔は <var>1</var> 秒です。<br />
+高橋君は AtCoder 社の業務時間中に SNS の chokutter を以下の規則で見ます。  </p>
+<ul>
+<li>始業と同時に chokutter を開く。</li>
+<li>青木君が高橋君のデスクの後ろを通りかかった瞬間に chokutter を開いていた場合、直ちに chokutter を閉じる。</li>
+<li>高橋君は、 chokutter を時刻 <var>t</var> に閉じると、時刻 <var>t+100</var> に必ず chokutter を開く。</li>
+</ul>
+<p>始業から終業までに <var>N</var> 回青木君が高橋君のデスクの後ろを通りかかっており、そのうち <var>i</var> 回目は時刻 <var>A_i</var> でした。<br />
+始業から終業までに、高橋君は合計で何秒 chokutter を見ていましたか？<br />
+なお、 <strong>高橋君が chokutter を開いた瞬間に青木君がデスクの後ろを通りかかることはありませんでした。</strong></p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li>入力は全て整数</li>
+<li><var>0 \le N \le 3 \times 10^5</var></li>
+<li><var>1 \le A_1 &lt; A_2 &lt; \dots &lt; A_N \le T \le 10^9</var></li>
+<li>高橋君が chokutter を開いた瞬間に青木君がデスクの後ろを通りかかることはない</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var> <var>T</var>
+<var>A_1</var> <var>A_2</var> <var>\dots</var> <var>A_N</var>
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>答えを出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>5 700
+100 150 300 350 700
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>500
+</pre>
+
+<ul>
+<li>時刻 <var>0</var> に高橋君は chokutter を開きます。</li>
+<li>時刻 <var>100</var> に青木君が高橋君のデスクの後ろを通りかかり、高橋君は直ちに chokutter を閉じます。</li>
+<li>時刻 <var>150</var> に青木君が高橋君のデスクの後ろを通りかかりますが、高橋君はこの時点で chokutter を開いていません。</li>
+<li>時刻 <var>200</var> に高橋君は再び chokutter を開きます。</li>
+<li>時刻 <var>300</var> に青木君が高橋君のデスクの後ろを通りかかり、高橋君は直ちに chokutter を閉じます。</li>
+<li>時刻 <var>350</var> に青木君が高橋君のデスクの後ろを通りかかりますが、高橋君はこの時点で chokutter を開いていません。</li>
+<li>時刻 <var>400</var> に高橋君は再び chokutter を開きます。</li>
+<li>時刻 <var>700</var> に青木君が高橋君のデスクの後ろを通りかかり、高橋君は直ちに chokutter を閉じます。</li>
+</ul>
+<p>高橋君は、合計で <var>500</var> 秒間 chokutter を見ていました。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>0 1000000000
+
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>1000000000
+</pre>
+
+<p>青木君が高橋君のデスクの後ろを通りかかることがない場合もあります。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>10 1234
+395 424 588 745 773 863 910 958 1102 1195
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>734
+</pre></section>
+</div>

@@ -1,0 +1,139 @@
+
+<p>配点 : <var>300</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>空の整数列 <var>A=()</var> があります。クエリが <var>Q</var> 個与えられるので、与えられた順に処理してください。クエリは以下の <var>2</var> 種類です。</p>
+<ul>
+<li>タイプ <var>1</var> : <code>1 c x</code> の形式で与えられる。<var>A</var> の末尾に <var>x</var> を <var>c</var> 個追加する。</li>
+<li>タイプ <var>2</var> : <code>2 k</code> の形式で与えられる。<var>A</var> の先頭 <var>k</var> 要素を削除し、削除した <var>k</var> 個の整数の総和を出力する。このとき、<var>k</var> はその時点での <var>A</var> の長さ以下であることが保証される。</li>
+</ul>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1 \leq Q \leq 2 \times 10^{5}</var></li>
+<li>タイプ <var>1</var> のクエリにおいて、 <var>1 \leq c \leq 10^{9}</var></li>
+<li>タイプ <var>1</var> のクエリにおいて、 <var>1 \leq x \leq 10^{9}</var></li>
+<li>タイプ <var>2</var> のクエリにおいて、その時点での <var>A</var> の長さを <var>n</var> として、 <var>1 \leq k \leq \min(10^{9},n)</var></li>
+<li>入力はすべて整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>Q</var>
+<var>\text{query}_1</var>
+<var>\text{query}_2</var>
+<var>\vdots</var>
+<var>\text{query}_Q</var>
+</pre>
+
+<p>ただし、 <var>\text{query}_i</var> は <var>i</var> 個目のクエリを表し、以下のいずれかの形式である。</p>
+<pre><var>1</var> <var>c</var> <var>x</var>
+</pre>
+
+<pre><var>2</var> <var>k</var>
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>タイプ <var>2</var> のクエリの個数を <var>q</var> として、<var>q</var> 行出力せよ。<var>i</var> 行目には、<var>i</var> 個目のタイプ <var>2</var> のクエリに対する答えを出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>5
+1 2 3
+1 4 5
+2 3
+1 6 2
+2 5
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>11
+19
+</pre>
+
+<ul>
+<li><var>1</var> 個目のクエリ: <var>A</var> の末尾に <var>3</var> を <var>2</var> 個追加する。このとき、<var>A=(3,3)</var> となる。</li>
+<li><var>2</var> 個目のクエリ: <var>A</var> の末尾に <var>5</var> を <var>4</var> 個追加する。このとき、<var>A=(3,3,5,5,5,5)</var> となる。</li>
+<li><var>3</var> 個目のクエリ: <var>A</var> の先頭 <var>3</var> 要素を削除する。このとき、削除した <var>3</var> 個の整数の総和は <var>3+3+5=11</var> となるため <var>11</var> と出力する。削除後、<var>A=(5,5,5)</var> となる。</li>
+<li><var>4</var> 個目のクエリ: <var>A</var> の末尾に <var>2</var> を <var>6</var> 個追加する。このとき、<var>A=(5,5,5,2,2,2,2,2,2)</var> となる。</li>
+<li><var>5</var> 個目のクエリ: <var>A</var> の先頭 <var>5</var> 要素を削除する。このとき、削除した <var>5</var> 個の整数の総和は <var>5+5+5+2+2=19</var> となるため <var>19</var> と出力する。削除後、<var>A=(2,2,2,2)</var> となる。</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>10
+1 75 22
+1 81 72
+1 2 97
+1 84 82
+1 2 32
+1 39 57
+2 45
+1 40 16
+2 32
+2 42
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>990
+804
+3024
+</pre>
+
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>10
+1 160449218 954291757
+2 17217760
+1 353195922 501899080
+1 350034067 910748511
+1 824284691 470338674
+2 180999835
+1 131381221 677959980
+1 346948152 208032501
+1 893229302 506147731
+2 298309896
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>16430766442004320
+155640513381884866
+149721462357295680
+</pre></section>
+</div>

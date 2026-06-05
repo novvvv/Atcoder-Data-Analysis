@@ -1,0 +1,117 @@
+
+<p>配点 : <var>450</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>AtCoder社の社員である青木さんの今月の給料は、整数 <var>N</var> と長さ <var>N</var> の数列 <var>A</var> を用いて以下のように決められます。<br />
+まず、青木さんに <var>1</var> から <var>N</var> までの整数が等確率で出る <var>N</var> 面ダイスと変数 <var>x=0</var> を渡します。</p>
+<p>その後、以下の手順を終了まで繰り返します。</p>
+<ul>
+<li>ダイスを <var>1</var> 度振り、出た目を <var>y</var> とする。<ul>
+<li>もし <var>x&lt;y</var> なら <var>A_y</var> 円支給し、 <var>x=y</var> と更新する。</li>
+<li>そうでないなら終了する。</li>
+</ul>
+</li>
+</ul>
+<p>青木さんの今月の給料は、この手順によって支給された金額の合計です。<br />
+青木さんの今月の給料の期待値を <var>{}\bmod{998244353}</var> で求めてください。</p>
+<details><summary>期待値 <var>{}\bmod{998244353}</var> の定義</summary>
+
+この問題で求める期待値は必ず有理数になることが証明できます。 また、この問題の制約下では、求める期待値を既約分数 <var>\frac yx</var> で表したときに <var>x</var> が <var>998244353</var> で割り切れないことが保証されます。
+
+このとき、<var>y\equiv xz\pmod{998244353}</var> を満たす <var>0\leq z\lt998244353</var> がただ一つ存在するので、<var>z</var> を出力してください。
+
+</details>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li>入力は全て整数</li>
+<li><var>1 \le N \le 3 \times 10^5</var></li>
+<li><var>0 \le A_i &lt; 998244353</var></li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var>
+<var>A_1</var> <var>A_2</var> <var>\dots</var> <var>A_N</var>
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>答えを出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>3
+3 2 6
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>776412280
+</pre>
+
+<p>手順の一例は、以下の通りです。  </p>
+<ul>
+<li>最初、 <var>x=0</var> である。</li>
+<li>ダイスを <var>1</var> 度振り、出た目が <var>1</var> であった。 <var>0&lt;1</var> であるため、 <var>A_1 = 3</var> 円支給し、 <var>x=1</var> とする。</li>
+<li>ダイスを <var>1</var> 度振り、出た目が <var>3</var> であった。 <var>1&lt;3</var> であるため、 <var>A_3 = 6</var> 円支給し、 <var>x=3</var> とする。</li>
+<li>ダイスを <var>1</var> 度振り、出た目が <var>1</var> であった。 <var>3 \ge 1</var> であるため、終了する。</li>
+</ul>
+<p>この例では、青木さんの今月の給料は <var>9</var> 円です。</p>
+<p>なお、青木さんの今月の給料の期待値は <var>\frac{49}{9}</var> 円と求めることができ、これを <var>{}\bmod{998244353}</var> 上で表現すると <var>776412280</var> となります。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>1
+998244352
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>998244352
+</pre>
+
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>9
+3 14 159 2653 58979 323846 2643383 27950288 419716939
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>545252774
+</pre></section>
+</div>

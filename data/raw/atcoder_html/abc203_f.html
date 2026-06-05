@@ -1,0 +1,55 @@
+
+			
+
+
+	
+	
+
+			<span class="lang">
+<span class="lang-ja">
+<p>配点 : <var>600</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>高橋君と青木君の家の庭には草 <var>1</var>, 草 <var>2</var>, <var>\ldots</var>, 草 <var>N</var> の <var>N</var> 本の草が生えており、草 <var>i</var> の高さは <var>A_i</var> です。
+高橋君と青木君は次の方法で庭の草抜きを行う事にしました。</p>
+<ul>
+<li>まず、青木君が高々 <var>K</var> 本の草を選んで抜く。</li>
+<li>
+<p>その後、高橋君が次の操作を庭の草がすべて抜けるまで繰り返す。</p>
+<ul>
+<li>残っている草のうち高さが最大のものの高さを <var>H</var> とする。残っている草のうち、高さが <var>\frac{H}{2}</var> より高いものを一斉に抜く。</li>
+</ul>
+</li>
+</ul>
+<p>青木君は、高橋君の操作回数が最小となるようにした上で、自分の抜く本数を最小にしたいと考えています。
+このときの高橋君の操作回数と青木君の抜く草の本数を求めてください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1 \leq N \leq 2\times 10^5</var></li>
+<li><var>0 \leq K \leq N</var></li>
+<li><var>1 \leq A_i \leq 10^9</var></li>
+<li>入力は全て整数である。</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var> <var>K</var>
+<var>A_1</var> <var>A_2</var> <var>\ldots</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>高橋君の操作回数と青木君の抜く草の本数をこの順に空白区切りで出力せよ。</p>
+</section>

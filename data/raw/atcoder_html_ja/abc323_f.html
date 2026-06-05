@@ -1,0 +1,103 @@
+
+<p>配点 : <var>525</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>座標平面上に高橋君と荷物があります。</p>
+<p>高橋君は現在 <var>(X_A,Y_A)</var> におり、荷物は <var>(X_B,Y_B)</var> にあります。
+高橋君は荷物を <var>(X_C,Y_C)</var> まで運びたいです。</p>
+<p>高橋君は <var>(x,y)</var> にいるとき、<var>1</var> 回の行動で次のいずれかの動きをすることができます。</p>
+<ul>
+<li><var>(x+1,y)</var> に移動する。移動前の時点で荷物が <var>(x+1,y)</var> にあった時、荷物を <var>(x+2,y)</var> に移動させる。</li>
+<li><var>(x-1,y)</var> に移動する。移動前の時点で荷物が <var>(x-1,y)</var> にあった時、荷物を <var>(x-2,y)</var> に移動させる。</li>
+<li><var>(x,y+1)</var> に移動する。移動前の時点で荷物が <var>(x,y+1)</var> にあった時、荷物を <var>(x,y+2)</var> に移動させる。</li>
+<li><var>(x,y-1)</var> に移動する。移動前の時点で荷物が <var>(x,y-1)</var> にあった時、荷物を <var>(x,y-2)</var> に移動させる。</li>
+</ul>
+<p>荷物を <var>(X_C,Y_C)</var> に移動させるまでに必要な最小の行動回数を求めてください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>-10^{17}\leq X_A,Y_A,X_B,Y_B,X_C,Y_C\leq 10^{17}</var></li>
+<li><var>(X_A,Y_A)\neq (X_B,Y_B)</var></li>
+<li><var>(X_B,Y_B)\neq (X_C,Y_C)</var></li>
+<li>入力はすべて整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>X_A</var> <var>Y_A</var> <var>X_B</var> <var>Y_B</var> <var>X_C</var> <var>Y_C</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>荷物を <var>(X_C,Y_C)</var> に移動させるまでに必要な最小の行動回数を出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>1 2 3 3 0 5
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>9
+</pre>
+<p>高橋君は次のように行動することで <var>9</var> 回で荷物を <var>(0,5)</var> に運ぶことができます。</p>
+<ul>
+<li><var>(2,2)</var> へ移動する。</li>
+<li><var>(3,2)</var> へ移動する。</li>
+<li><var>(3,3)</var> へ移動する。荷物は <var>(3,4)</var> に移動する。</li>
+<li><var>(3,4)</var> へ移動する。荷物は <var>(3,5)</var> に移動する。</li>
+<li><var>(4,4)</var> へ移動する。</li>
+<li><var>(4,5)</var> へ移動する。</li>
+<li><var>(3,5)</var> へ移動する。荷物は <var>(2,5)</var> に移動する。</li>
+<li><var>(2,5)</var> へ移動する。荷物は <var>(1,5)</var> に移動する。</li>
+<li><var>(1,5)</var> へ移動する。荷物は <var>(0,5)</var> に移動する。</li>
+</ul>
+<p><var>8</var> 回以下で荷物を <var>(0,5)</var> に運ぶことができないので、<var>9</var> を出力します。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>0 0 1 0 -1 0
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>6
+</pre>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>-100000000000000000 -100000000000000000 100000000000000000 100000000000000000 -100000000000000000 -100000000000000000
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>800000000000000003
+</pre></section>
+</div>

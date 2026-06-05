@@ -1,0 +1,16 @@
+tag,total_problems,share_2021,share_2025,delta_pp,spearman_r
+simulation,80,8.82,19.48,10.66,0.9
+string,102,8.82,15.58,6.76,0.3
+implementation,230,33.82,40.26,6.44,0.8
+brute force,40,2.94,7.79,4.85,0.9
+greedy,75,8.82,11.69,2.87,0.6
+grid,42,4.41,6.49,2.08,0.7
+prefix sum,43,4.41,6.49,2.08,0.7
+counting,66,13.24,14.29,1.05,0.1
+binary search,40,7.35,6.49,-0.86,0.1
+graph theory,35,7.35,5.19,-2.16,-0.7
+combinatorics,52,10.29,6.49,-3.8,-0.8
+sorting,55,14.71,7.79,-6.92,-0.3
+modular arithmetic,64,13.24,5.19,-8.05,-0.8
+math,53,17.65,7.79,-9.86,-0.5
+dp,107,20.59,10.39,-10.2,-0.9

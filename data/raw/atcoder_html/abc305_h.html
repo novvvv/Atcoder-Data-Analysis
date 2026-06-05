@@ -1,0 +1,68 @@
+
+			
+
+
+	
+	
+
+			<span class="lang">
+<span class="lang-ja">
+<p>配点 : <var>650</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>あなたは <strong>精進</strong> をすることにしました。精進とは、AtCoder の問題を大量に解くことをいいます。<br />
+精進は何日か掛けて行われます。1 日における精進は次の手順で行われます。</p>
+<ul>
+<li>その日に <var>M</var> 問の問題を解くとする。各問題には非負整数対 <var>(A, B)</var> が <strong>難易度</strong> と呼ばれる値としてついている。</li>
+<li>まず、<var>M</var> 問を自由な順番に並べ替える。そして、並び替えた後の順に問題を 1 問ずつ解いていく。</li>
+<li>あなたは <strong>疲労度</strong> という値を持っている。1 日のはじめの疲労度は <var>0</var> であり、難易度が <var>(A, B)</var> である問題を解くごとに疲労度が <var>x</var> から <var>Ax + B</var> に変化する。</li>
+<li><var>M</var> 問すべて解いた時点での疲労度を、その日の <strong>消費した体力</strong> と呼ぶ。</li>
+</ul>
+<p><var>N</var> 問の AtCoder の問題が並んでいて、順に問題 <var>1</var>, 問題 <var>2</var>, <var>\dots</var>, 問題 <var>N</var> と呼びます。問題 <var>i</var> の難易度は <var>(A_i, B_i)</var> です。<br />
+あなたは精進を行うことで <var>N</var> 問の問題を全て解くことにしました。<br />
+精進は次の手順で行います。以下では問題 <var>L</var>, 問題 <var>L+1</var>, <var>...</var>, 問題 <var>R</var> からなる問題の列を <var>[L, R]</var> と呼びます。</p>
+<ul>
+<li><var>1</var> 以上 <var>N</var> 以下の整数 <var>K</var> を自由に選ぶ。精進する日数を <var>K</var> 日とする。</li>
+<li><var>N</var> 問の問題の列を、<var>K</var> 個の非空な連続部分列に分割して、前から <var>i</var> 番目の列を <var>S_i</var> とする。  <br />
+    形式的に説明すると、狭義単調増加な非負整数列 <var>x_0, x_1, \dots, x_K</var> のうち <var>1 = x_0</var> かつ <var>x_K = N + 1</var> を満たすものを 1 つ選び、<var>1 \leq i \leq K</var> について <var>S_i = [x_{i-1}, x_i - 1]</var> とする。</li>
+<li>そして、<var>i=1, 2, \dots, K</var> について、 <var>i</var> 日目の精進では <var>S_i</var> に含まれる問題全てを解く。</li>
+</ul>
+<p>あなたは、精進全体での消費した体力の総和が <var>X</var> 以下になるように精進をすることにしました。<br />
+このような精進の日数 <var>K</var> として取り得る最小の値を <var>D</var> とします。(ここで <var>X</var> について、<var>\sum_{i = 1}^N B_i \leq X</var> が保証されています。この制約下において条件を満たす <var>D</var> は必ず存在します。)<br />
+また、<var>K=D</var> である精進において、精進全体での消費した体力の総和として取り得る最小の値を <var>M</var> とします。  </p>
+<p><var>D</var> および <var>M</var> を求めてください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>1 \leq X \leq 10^8</var></li>
+<li><var>1 \leq A_i \leq 10^5</var></li>
+<li><var>1 \leq B_i</var></li>
+<li><var>\sum_{i=1}^N B_i \leq X</var></li>
+<li>入力される値は全て整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var> <var>X</var>
+<var>A_1</var> <var>B_1</var>
+<var>A_2</var> <var>B_2</var>
+<var>\vdots</var>
+<var>A_N</var> <var>B_N</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p><var>D</var> および <var>M</var> を空白区切りで出力せよ。</p>
+</section>

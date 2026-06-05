@@ -1,0 +1,16 @@
+rank,tag,problem_count,slot_scope,problems_in_scope,share_pct
+1,implementation,73,C-F,348,20.98
+2,dp,69,C-F,348,19.83
+3,greedy,57,C-F,348,16.38
+4,counting,45,C-F,348,12.93
+5,simulation,43,C-F,348,12.36
+6,sorting,42,C-F,348,12.07
+7,modular arithmetic,41,C-F,348,11.78
+8,string,35,C-F,348,10.06
+9,prefix sum,32,C-F,348,9.2
+10,grid,30,C-F,348,8.62
+11,binary search,28,C-F,348,8.05
+12,bfs,27,C-F,348,7.76
+13,graph,27,C-F,348,7.76
+14,graph theory,26,C-F,348,7.47
+15,combinatorics,24,C-F,348,6.9

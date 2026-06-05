@@ -1,0 +1,118 @@
+
+<p>配点 : <var>625</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>長さ <var>N</var> の正整数列 <var>A=(A_1,A_2,\ldots,A_N),B=(B_1,B_2,\ldots,B_N),C=(C_1,C_2,\ldots,C_N)</var> が与えられます。</p>
+<p>以下の条件を満たす正整数の組 <var>(x,y)</var> の個数を求めてください。</p>
+<ul>
+<li>全ての <var>1\le i\le N</var> に対して <var>A_i\times x+B_i\times y &lt; C_i</var> が成立する。</li>
+</ul>
+<p>なお、条件を満たす正整数の組の個数は有限個であることが証明できます。</p>
+<p><var>T</var> 個のテストケースが与えられるので、それぞれに対して答えを求めてください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1\le T\le 2\times 10^5</var></li>
+<li><var>1\le N\le 2\times 10^5</var></li>
+<li><var>1\le A_i,B_i,C_i\le 10^9</var></li>
+<li>全てのテストケースにおける <var>N</var> の総和は <var>2\times 10^5</var> 以下である</li>
+<li>入力は全て整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。ここで、<var>\mathrm{case}_i</var> は <var>i</var> 番目のテストケースを意味する。</p>
+<pre><var>T</var>
+<var>\mathrm{case}_1</var>
+<var>\mathrm{case}_2</var>
+<var>\vdots</var>
+<var>\mathrm{case}_T</var>
+</pre>
+<p>各テストケースは以下の形式で与えられる。</p>
+<pre><var>N</var>
+<var>A_1</var> <var>B_1</var> <var>C_1</var>
+<var>A_2</var> <var>B_2</var> <var>C_2</var>
+<var>\vdots</var>
+<var>A_N</var> <var>B_N</var> <var>C_N</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p><var>T</var> 行出力せよ。
+<var>i</var> 行目 <var>(1\le i\le T)</var> には <var>\mathrm{case}_i</var> に対する答えを出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>2
+2
+1 1 4
+1 2 5
+1
+1 1 2
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>2
+0
+</pre>
+<p><var>1</var> つ目のテストケースでは、条件を満たす正整数の組は <var>(x,y)=(1,1),(2,1)</var> の <var>2</var> つです。したがって、 <var>1</var> 行目には <var>2</var> を出力してください。</p>
+<p><var>2</var> つ目のテストケースでは、条件を満たす正整数の組は存在しません。したがって、 <var>2</var> 行目には <var>0</var> を出力してください。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>3
+7
+138 16011 918976
+5478 7748 499926
+5234 17727 748589
+1157 10511 643136
+31200 3005 721285
+28839 14469 798851
+1933 5378 864127
+9
+17775 1665 386430
+37001 863 922418
+9756 4182 746671
+12379 9106 807578
+3984 4049 640539
+25333 9869 780810
+20372 7000 688738
+16107 11974 827227
+10779 10531 770510
+5
+4916 14132 460944
+11856 45422 610561
+56014 18216 825793
+10363 6220 945356
+37418 33866 851593
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>660
+995
+140
+</pre></section>
+</div>

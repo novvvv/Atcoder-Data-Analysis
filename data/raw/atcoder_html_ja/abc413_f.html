@@ -1,0 +1,154 @@
+
+<p>配点 : <var>525</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p><var>H</var> 行 <var>W</var> 列のグリッドがあります。上から <var>i</var> 行目、左から <var>j</var> 列目のマスを <var>(i,j)</var> と表します。また、このうち <var>K</var> 個のマスはゴールになっています。<var>i</var> 個目 <var>(1 \leq i \leq K)</var> のゴールはマス <var>(R_i, C_i)</var> です。</p>
+<p>高橋君と青木君はこのグリッドとグリッドの上に置かれた <var>1</var> つのコマを使ってあるゲームをしています。高橋君と青木君はコマがゴールのマスに到達するまで以下の一連の操作を繰り返し行います。</p>
+<ul>
+<li>青木君は <var>1</var> 以上 <var>4</var> 以下の整数 <var>a</var> を選ぶ。</li>
+<li>その後、高橋君は <var>1</var> 以上 <var>4</var> 以下の整数 <var>b</var> を選ぶ。ただし、<var>a \neq b</var> を満たす必要がある。操作前にコマが置いてあるマスを <var>(i,j)</var> としたとき、選んだ整数 <var>b</var> とコマの位置に応じて以下の通りにコマを移動させる。<ul>
+<li><var>b=1</var> のとき: マス <var>(i-1,j)</var> がグリッド内である場合はコマをマス <var>(i,j)</var> からマス <var>(i-1,j)</var> に移動させ、グリッドの外である場合はコマを移動させない。</li>
+<li><var>b=2</var> のとき: マス <var>(i+1,j)</var> がグリッド内である場合はコマをマス <var>(i,j)</var> からマス <var>(i+1,j)</var> に移動させ、グリッドの外である場合はコマを移動させない。</li>
+<li><var>b=3</var> のとき: マス <var>(i,j-1)</var> がグリッド内である場合はコマをマス <var>(i,j)</var> からマス <var>(i,j-1)</var> に移動させ、グリッドの外である場合はコマを移動させない。</li>
+<li><var>b=4</var> のとき: マス <var>(i,j+1)</var> がグリッド内である場合はコマをマス <var>(i,j)</var> からマス <var>(i,j+1)</var> に移動させ、グリッドの外である場合はコマを移動させない。</li>
+</ul>
+</li>
+</ul>
+<p>高橋君の目的はコマがゴールに到達するまでの移動回数を最小化することです。青木君の目的はコマがゴールに到達しないようにすることであり、それが不可能な場合は移動回数を最大化することです。</p>
+<p><var>1 \leq i \leq H,1 \leq j \leq W</var> を満たすすべての整数の組 <var>(i,j)</var> に対して以下の問題を解き、解の総和を求めてください。</p>
+<blockquote>
+<p>コマがマス <var>(i,j)</var> にある状態からゲームを始める。両者が各々の目的を目指して最適に行動するとき、高橋君がコマをゴールに到達させることができるのであれば移動回数の最小値、そうでないならば <var>0</var> が解である。</p>
+</blockquote>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>2 \leq H \leq 3000</var></li>
+<li><var>2 \leq W \leq 3000</var></li>
+<li><var>1 \leq K \leq \min(HW,3000)</var></li>
+<li><var>1 \leq R_i \leq H</var></li>
+<li><var>1 \leq C_i \leq W</var></li>
+<li><var>(R_i,C_i) \neq (R_j,C_j)</var> (<var>1 \leq i &lt; j \leq K</var>)</li>
+<li>入力はすべて整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>H</var> <var>W</var> <var>K</var>
+<var>R_1</var> <var>C_1</var>
+<var>R_2</var> <var>C_2</var>
+<var>\vdots</var>
+<var>R_K</var> <var>C_K</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>答えを出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>2 3 2
+1 2
+2 1
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>2
+</pre>
+<p><var>(i,j)=(1,2),(2,1)</var> のとき、開始するマスがゴールであるため、解は <var>0</var> です。</p>
+<p><var>(i,j)=(1,1),(2,2)</var> のとき、どの <var>a</var> を青木君が選んでも高橋君は <var>1</var> 回の移動でコマをゴールに到達させることができるため、解は <var>1</var> です。</p>
+<p><var>(i,j)=(1,3),(2,3)</var> のとき、高橋君はコマをゴールに到達させることができないため、解は <var>0</var> です。</p>
+<p>これらの合計は <var>0 \times 2 + 1 \times 2 + 0 \times 2 = 2</var> です。よって <var>2</var> を出力します。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>9 3 9
+1 3
+6 1
+4 1
+1 2
+2 1
+7 1
+9 3
+8 1
+9 2
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>43
+</pre>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>10 10 36
+3 8
+5 10
+3 10
+6 10
+2 10
+2 8
+7 10
+1 10
+1 8
+7 6
+7 8
+2 5
+1 6
+8 8
+7 5
+2 4
+9 8
+7 4
+4 3
+10 10
+10 8
+8 10
+10 6
+6 2
+4 2
+10 5
+8 3
+1 2
+2 1
+4 1
+10 4
+10 3
+8 1
+6 1
+10 2
+9 1
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>153
+</pre></section>
+</div>

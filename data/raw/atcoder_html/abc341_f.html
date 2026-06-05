@@ -1,0 +1,61 @@
+
+			
+
+
+	
+	
+
+			<span class="lang">
+<span class="lang-ja">
+<p>配点 : <var>475</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p><var>N</var> 個の頂点と <var>M</var> 本の辺からなる単純な無向グラフが与えられます。
+<var>i = 1, 2, \ldots, M</var> について、<var>i</var> 番目の辺は頂点 <var>u_i</var> と頂点 <var>v_i</var> を結ぶ辺です。
+また、<var>i = 1, 2, \ldots, N</var> について、頂点 <var>i</var> には正整数 <var>W_i</var> が割り当てられており、<var>A_i</var> 個のコマが置かれています。</p>
+<p>グラフ上にコマが存在する限り、下記の操作を繰り返します。</p>
+<ul>
+<li>まず、グラフ上のコマを <var>1</var> 個選んで取り除き、そのコマが置かれていた頂点を <var>x</var> とおく。</li>
+<li><var>x</var> に隣接するいくつかの頂点からなる（空でも良い）集合 <var>S</var> であって、<var>\sum_{y \in S} W_y \lt W_x</var> であるものを選び、<var>S</var> に含まれる頂点それぞれに <var>1</var> 個ずつコマを置く。</li>
+</ul>
+<p>操作を行う回数としてあり得る最大値を出力してください。</p>
+<p>なお、どのように操作を行っても、有限回の操作の後にはグラフ上にコマが存在しない状態に至ることが証明出来ます。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li>入力される値はすべて整数</li>
+<li><var>2 \leq N \leq 5000</var></li>
+<li><var>1 \leq M \leq \min \lbrace N(N-1)/2, 5000 \rbrace</var></li>
+<li><var>1 \leq u_i, v_i \leq N</var></li>
+<li><var>u_i \neq v_i</var></li>
+<li><var>i \neq j \implies \lbrace u_i, v_i \rbrace \neq \lbrace u_j, v_j \rbrace</var></li>
+<li><var>1 \leq W_i \leq 5000</var></li>
+<li><var>0 \leq A_i \leq 10^9</var></li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var> <var>M</var>
+<var>u_1</var> <var>v_1</var>
+<var>u_2</var> <var>v_2</var>
+<var>\vdots</var>
+<var>u_M</var> <var>v_M</var>
+<var>W_1</var> <var>W_2</var> <var>\ldots</var> <var>W_N</var>
+<var>A_1</var> <var>A_2</var> <var>\ldots</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>答えを出力せよ。</p>
+</section>

@@ -1,0 +1,87 @@
+
+<p>配点 : <var>300</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>英小文字、<code>,</code>、<code>"</code> からなる長さ <var>N</var> の文字列 <var>S</var> が与えられます。<var>S</var> に含まれる <code>"</code> の個数は偶数であることが保証されています。</p>
+<p><var>S</var> に含まれる <code>"</code> の個数を <var>2K</var> 個とすると、各 <var>i=1,2,\ldots,K</var> について <var>2i-1</var> 番目の <code>"</code> から <var>2i</var> 番目の <code>"</code> までの文字のことを <strong>括られた文字</strong> と呼びます。</p>
+<p>あなたの仕事は、 <var>S</var> に含まれる <code>,</code> のうち、括られた文字 <strong>でないもの</strong> を <code>.</code> で置き換えて得られる文字列を答えることです。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>N</var> は <var>1</var> 以上 <var>2\times 10^5</var> 以下の整数</li>
+<li><var>S</var> は英小文字、<code>,</code>、<code>"</code> からなる長さ <var>N</var> の文字列</li>
+<li><var>S</var> に含まれる <code>"</code> の個数は偶数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var>
+<var>S</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>答えを出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>8
+&quot;a,b&quot;c,d
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>&quot;a,b&quot;c.d
+</pre>
+<p><var>S</var> のうち <code>"a,b"</code> が括られた文字であり、<code>c,d</code> は括られた文字ではありません。</p>
+<p><var>S</var> に含まれる <code>,</code> のうち、括られた文字でないのは <var>S</var> の左から <var>7</var> 番目の文字なので、<var>7</var> 番目の文字を <code>.</code> で置き換えたものが答えとなります。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>5
+,,,,,
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>.....
+</pre>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>20
+a,&quot;t,&quot;c,&quot;o,&quot;d,&quot;e,&quot;r,
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>a.&quot;t,&quot;c.&quot;o,&quot;d.&quot;e,&quot;r.
+</pre></section>
+</div>

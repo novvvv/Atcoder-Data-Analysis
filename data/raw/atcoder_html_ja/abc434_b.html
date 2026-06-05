@@ -1,0 +1,82 @@
+
+<p>配点 : <var>200</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>空に <var>M</var> 種類の鳥が合わせて <var>N</var> 羽飛んでいます。<br />
+鳥の種類には <var>1,2,\dots,M</var> の番号が付けられています。<br />
+<var>N</var> 羽の鳥には <var>1,2,\dots,N</var> の番号が付けられており、鳥 <var>i</var> の種類は <var>A_i</var> で、大きさは <var>B_i</var> です。</p>
+<p>全ての <var>k=1,2,\dots,M</var> について、飛んでいる種類 <var>k</var> の鳥の大きさの平均値を求めてください。<br />
+ただし、全ての <var>k=1,2,\dots,M</var> について、種類 <var>k</var> の鳥が <var>1</var> 羽以上飛んでいることが保証されます。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1 \le M \le N \le 100</var></li>
+<li><var>1 \le A_i \le M</var></li>
+<li><var>1 \le B_i \le 100</var></li>
+<li>種類 <var>k</var> の鳥が少なくとも <var>1</var> 羽存在する ( <var>1 \le k \le M</var> )</li>
+<li>入力される値は全て整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var> <var>M</var>
+<var>A_1</var> <var>B_1</var>
+<var>A_2</var> <var>B_2</var>
+<var>\vdots</var>
+<var>A_N</var> <var>B_N</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p><var>M</var> 行出力せよ。<br />
+<var>k</var> ( <var>1 \le k \le M</var> ) 行目には、種類 <var>k</var> の鳥の大きさの平均値を出力せよ。<br />
+真の解との絶対誤差または相対誤差が <var>10^{-5}</var> 以下であるとき、正解とみなされる。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>10 5
+4 92
+1 16
+3 77
+4 99
+2 89
+3 8
+1 40
+5 56
+1 40
+4 77
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>32.00000000000000000000
+89.00000000000000000000
+42.50000000000000000000
+89.33333333333333333333
+56.00000000000000000000
+</pre>
+<ul>
+<li>種類 <var>1</var> の鳥の大きさの平均値は <var>(16+40+40)/3 = 32</var> です。</li>
+<li>種類 <var>2</var> の鳥の大きさの平均値は <var>89</var> です。</li>
+<li>種類 <var>3</var> の鳥の大きさの平均値は <var>(77+8)/2 = 42.5</var> です。</li>
+<li>種類 <var>4</var> の鳥の大きさの平均値は <var>(92+99+77)/3 \approx 89.3333</var> です。</li>
+<li>種類 <var>5</var> の鳥の大きさの平均値は <var>56</var> です。</li>
+</ul></section>
+</div>

@@ -1,0 +1,86 @@
+
+			
+
+
+	
+	
+
+			<span class="lang">
+<span class="lang-ja">
+<p>配点 : <var>500</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>街 <var>A</var> と街 <var>B</var> の間を往復する電車があります。
+電車は時刻 <var>0</var> に街 <var>A</var> を出発した後、</p>
+<ul>
+<li><var>X</var> 秒かけて街 <var>B</var> に移動</li>
+<li>街 <var>B</var> で <var>Y</var> 秒停車</li>
+<li><var>X</var> 秒かけて街 <var>A</var> に移動</li>
+<li>街 <var>A</var> で <var>Y</var> 秒停車</li>
+</ul>
+<p>を繰り返します。<br />
+より厳密には、これらは半開区間として扱います。すなわち、<var>n = 0, 1, 2, \dots</var> について、</p>
+<ul>
+<li><var>(2X + 2Y)n ≤ t &lt; (2X + 2Y)n + X</var> を満たす時刻 <var>t</var> には電車は街 <var>B</var> に移動している</li>
+<li><var>(2X + 2Y)n + X ≤ t &lt; (2X + 2Y)n + X + Y</var> を満たす時刻 <var>t</var> には電車は街 <var>B</var> で停車している</li>
+<li><var>(2X + 2Y)n + X + Y ≤ t &lt; (2X + 2Y)n + 2X + Y</var> を満たす時刻 <var>t</var> には電車は街 <var>A</var> に移動している</li>
+<li><var>(2X + 2Y)n + 2X + Y ≤ t &lt; (2X + 2Y)(n + 1)</var> を満たす時刻 <var>t</var> には電車は街 <var>A</var> で停車している</li>
+</ul>
+<p>が満たされます。</p>
+<p>高橋くんは電車に乗って時刻 <var>0</var> に街 <var>A</var> を出発し、街 <var>B</var> で電車を降りようと思っています。
+高橋くんは時刻 <var>0</var> に街 <var>A</var> を出発した後、</p>
+<ul>
+<li><var>P</var> 秒間眠っている</li>
+<li><var>Q</var> 秒間起きている</li>
+</ul>
+<p>を繰り返します。<br />
+これらも半開区間として扱います。すなわち、<var>n = 0, 1, 2, \dots</var> について、</p>
+<ul>
+<li><var>(P + Q)n ≤ t &lt; (P + Q)n + P</var> を満たす時刻 <var>t</var> には高橋くんは眠っている</li>
+<li><var>(P + Q)n + P ≤ t &lt; (P + Q)(n + 1)</var> を満たす時刻 <var>t</var> には高橋くんは起きている</li>
+</ul>
+<p>が満たされます。</p>
+<p>街 <var>B</var> に電車が停車しており、かつ、高橋くんが起きていれば高橋くんは街 <var>B</var> で電車を降りることができます。<br />
+高橋くんが街 <var>B</var> で電車を降りることができるか判定し、できる場合は、最短でいつになるか求めてください。<br />
+なお、この値はこの問題の制約下で整数になることが証明できます。</p>
+<p><var>T</var> 個のケースが与えられるので、それぞれについて答えを求めてください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li>入力は全て整数</li>
+<li><var>1 ≤ T ≤ 10</var></li>
+<li><var>1 ≤ X ≤ 10^9</var></li>
+<li><var>1 ≤ Y ≤ 500</var></li>
+<li><var>1 ≤ P ≤ 10^9</var></li>
+<li><var>1 ≤ Q ≤ 500</var></li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>T</var>
+<var>\rm case_1</var>
+<var>\rm case_2</var>
+<var>\hspace{9pt}\vdots</var>
+<var>\rm case_T</var>
+</pre>
+<p>各ケースは以下の形式で与えられる。</p>
+<pre><var>X</var> <var>Y</var> <var>P</var> <var>Q</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p><var>T</var> 行出力せよ。<br />
+<var>i</var> 行目には、<var>\rm case_i</var> についてこの問題を解き、街 <var>B</var> で電車を降りられる時刻が存在する場合、そのような時刻のうち最小のものを整数で出力せよ。
+街 <var>B</var> で電車を降りられる時刻が存在しない場合、<code>infinity</code> と出力せよ。  </p>
+</section>

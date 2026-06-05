@@ -1,0 +1,129 @@
+
+<p>配点 : <var>300</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>英小文字からなる文字列 <var>S, T</var> が与えられます。ここで、<var>S</var> と <var>T</var> の長さは等しいです。</p>
+<p><var>X</var> を空の配列とし、以下の操作を <var>S</var> と <var>T</var> が等しくなるまで繰り返します。</p>
+<ul>
+<li><var>S</var> の文字を <var>1</var> 文字書き換え、<var>X</var> の末尾に <var>S</var> を追加する。</li>
+</ul>
+<p>こうして得られる文字列の配列 <var>X</var> のうち要素数最小のものを求めてください。要素数最小のものが複数考えられる場合は、そのうち辞書順最小のものを求めてください。</p>
+<details> <summary>文字列の配列の辞書順とは</summary>
+
+<p>長さ <var>N</var> の文字列 <var>S = S_1 S_2 \ldots S_N</var> が長さ <var>N</var> の文字列 <var>T = T_1 T_2 \ldots T_N</var> より<strong>辞書順で小さい</strong>とは、ある整数 <var>1 \leq i \leq N</var> が存在して下記の <var>2</var> つがともに成り立つことをいいます。</p>
+<ul>
+<li> <var>S_1 S_2 \ldots S_{i-1} = T_1 T_2 \ldots T_{i-1}</var></li>
+<li> <var>S_i</var> が <var>T_i</var> よりアルファベット順で早い。</li>
+</ul>
+
+<p>要素数 <var>M</var> の文字列の配列 <var>X = (X_1,X_2,\ldots,X_M)</var> が要素数 <var>M</var> の文字列の配列 <var>Y = (Y_1,Y_2,\ldots,Y_M)</var> より<strong>辞書順で小さい</strong>とは、ある整数 <var>1 \leq j \leq M</var> が存在して下記の <var>2</var> つがともに成り立つことをいいます。</p>
+<ul>
+<li> <var>(X_1,X_2,\ldots,X_{j-1}) = (Y_1,Y_2,\ldots,Y_{j-1})</var></li>
+<li> <var>X_j</var> が <var>Y_j</var> より辞書順で小さい。</li>
+</ul>
+
+</details>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>S, T</var> は英小文字からなる長さ <var>1</var> 以上 <var>100</var> 以下の文字列</li>
+<li><var>S</var> と <var>T</var> の長さは等しい</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>S</var>
+<var>T</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>答えの要素数を <var>M</var> として <var>M + 1</var> 行出力せよ。</p>
+<p><var>1</var> 行目には <var>M</var> の値を出力せよ。</p>
+<p><var>i + 1 (1 \leq i \leq M)</var> 行目には答えの <var>i</var> 番目の要素を出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>adbe
+bcbc
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>3
+acbe
+acbc
+bcbc
+</pre>
+<p>はじめ、<var>S =</var> <code>adbe</code> です。</p>
+<p>以下のように操作することで、<var>X = (</var> <code>acbe</code> <var>,</var> <code>acbc</code> <var>,</var> <code>bcbc</code> <var>)</var> とすることができます。</p>
+<ul>
+<li>
+<p><var>S</var> を <code>acbe</code> に書き換え、<var>X</var> の末尾に <code>acbe</code> を追加する。</p>
+</li>
+<li>
+<p><var>S</var> を <code>acbc</code> に書き換え、<var>X</var> の末尾に <code>acbc</code> を追加する。</p>
+</li>
+<li>
+<p><var>S</var> を <code>bcbc</code> に書き換え、<var>X</var> の末尾に <code>bcbc</code> を追加する。</p>
+</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>abcde
+abcde
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>0
+</pre>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>afwgebrw
+oarbrenq
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>8
+aawgebrw
+aargebrw
+aarbebrw
+aarbebnw
+aarbebnq
+aarbeenq
+aarbrenq
+oarbrenq
+</pre></section>
+</div>

@@ -1,0 +1,106 @@
+
+<p>配点 : <var>475</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>長さ <var>N</var> の数列 <var>A=(A_1,A_2,\dots,A_N)</var> が与えられます。<br />
+以下の <var>Q</var> 個のクエリに、与えられる順番で対応してください。</p>
+<p><var>k</var> 番目のクエリは以下の形式で与えられます。</p>
+<pre><var>i_k</var> <var>x_k</var>
+</pre>
+
+<ul>
+<li>まず、 <var>A_{i_k} = x_k</var> と変更する。この変更は以降のクエリにも引き継がれる。</li>
+<li>その後、 <var>A</var> の <var>\rm{mex}</var> を出力する。<ul>
+<li><var>A</var> の <var>\rm{mex}</var> とは、 <var>A</var> に含まれない最小の非負整数を指す。</li>
+</ul>
+</li>
+</ul>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li>入力は全て整数</li>
+<li><var>1 \le N,Q \le 2 \times 10^5</var></li>
+<li><var>0 \le A_i \le 10^9</var></li>
+<li><var>1 \le i_k \le N</var></li>
+<li><var>0 \le x_k \le 10^9</var></li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var> <var>Q</var>
+<var>A_1</var> <var>A_2</var> <var>\dots</var> <var>A_N</var>
+<var>i_1</var> <var>x_1</var>
+<var>i_2</var> <var>x_2</var>
+<var>\vdots</var>
+<var>i_Q</var> <var>x_Q</var>
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>全体で <var>Q</var> 行出力せよ。<br />
+そのうち <var>k</var> 行目には <var>k</var> 番目のクエリに対する答えを整数として出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>8 5
+2 0 2 2 1 1 2 5
+4 3
+4 4
+6 3
+8 1000000000
+2 1
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>4
+3
+6
+5
+0
+</pre>
+
+<p>最初、数列 <var>A</var> は <var>(2,0,2,2,1,1,2,5)</var> です。<br />
+この入力では、 <var>5</var> つのクエリを処理します。</p>
+<ul>
+<li><var>1</var> 番目のクエリで <var>A_4 = 3</var> と変更し、 <var>A=(2,0,2,3,1,1,2,5)</var> となりました。<ul>
+<li>この時点で、 <var>A</var> の <var>\rm{mex}</var> は <var>4</var> です。</li>
+</ul>
+</li>
+<li><var>2</var> 番目のクエリで <var>A_4 = 4</var> と変更し、 <var>A=(2,0,2,4,1,1,2,5)</var> となりました。<ul>
+<li>この時点で、 <var>A</var> の <var>\rm{mex}</var> は <var>3</var> です。</li>
+</ul>
+</li>
+<li><var>3</var> 番目のクエリで <var>A_6 = 3</var> と変更し、 <var>A=(2,0,2,4,1,3,2,5)</var> となりました。<ul>
+<li>この時点で、 <var>A</var> の <var>\rm{mex}</var> は <var>6</var> です。</li>
+</ul>
+</li>
+<li><var>4</var> 番目のクエリで <var>A_8 = 1000000000</var> と変更し、 <var>A=(2,0,2,4,1,3,2,1000000000)</var> となりました。<ul>
+<li>この時点で、 <var>A</var> の <var>\rm{mex}</var> は <var>5</var> です。</li>
+</ul>
+</li>
+<li><var>5</var> 番目のクエリで <var>A_2 = 1</var> と変更し、 <var>A=(2,1,2,4,1,3,2,1000000000)</var> となりました。<ul>
+<li>この時点で、 <var>A</var> の <var>\rm{mex}</var> は <var>0</var> です。</li>
+</ul>
+</li>
+</ul></section>
+</div>

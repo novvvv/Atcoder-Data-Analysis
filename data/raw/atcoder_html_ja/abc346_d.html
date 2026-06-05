@@ -1,0 +1,104 @@
+
+<p>配点 : <var>400</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p><code>0</code>, <code>1</code> からなる長さ <var>N</var> の文字列 <var>S</var> が与えられます。</p>
+<p><code>0</code>, <code>1</code> からなる長さ <var>N</var> の文字列 <var>T</var> は以下の条件を満たすとき、またそのときに限り <strong>良い文字列</strong> であると定義します。</p>
+<ul>
+<li><var>1 \leq i \leq N - 1</var> を満たす整数 <var>i</var> であって、<var>T</var> の <var>i</var> 文字目と <var>i + 1</var> 文字目が一致するようなものがちょうど <var>1</var> つ存在する。</li>
+</ul>
+<p><var>i = 1,2,\ldots, N</var> について以下の操作を <var>1</var> 度行うか行わないか選ぶことができます。</p>
+<ul>
+<li><var>S</var> の <var>i</var> 文字目が <code>0</code> であるとき <var>S</var> の <var>i</var> 文字目を <code>1</code> に、そうでないとき <var>S</var> の <var>i</var> 文字目を <code>0</code> に置き換える。操作を行った場合、<var>C_i</var> のコストがかかる。</li>
+</ul>
+<p><var>S</var> を良い文字列にするために必要なコストの総和の最小値を求めてください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>2 \leq N \leq 2 \times 10^5</var></li>
+<li><var>S</var> は長さ <var>N</var> の <code>0</code>,<code>1</code> からなる文字列</li>
+<li><var>1 \leq C_i \leq 10^9</var></li>
+<li><var>N, C_i</var> は整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var>
+<var>S</var>
+<var>C_1</var> <var>C_2</var> <var>\ldots</var> <var>C_N</var>
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>答えを出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>5
+00011
+3 9 2 6 4
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>7
+</pre>
+
+<p><var>i = 1, 5</var> に対して操作を行い、<var>i = 2, 3, 4</var> に対して操作を行わないことで <var>S =</var> <code>10010</code> となり、<var>S</var> は良い文字列となります。このときかかるコストは <var>7</var> であり、コスト <var>7</var> 未満で <var>S</var> を良い文字列にすることはできないため、<var>7</var> を出力します。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>4
+1001
+1 2 3 4
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>0
+</pre>
+
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>11
+11111100111
+512298012 821282085 543342199 868532399 690830957 973970164 928915367 954764623 923012648 540375785 925723427
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>2286846953
+</pre></section>
+</div>

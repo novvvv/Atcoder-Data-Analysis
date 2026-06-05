@@ -1,0 +1,62 @@
+
+			
+
+
+	
+	
+
+			<span class="lang">
+<span class="lang-ja">
+<p>配点 : <var>500</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p><var>N</var> 個の箱 <var>1,2,\dots,N</var> と、 <var>10^{100}</var> 個のボール <var>1,2,\dots,10^{100}</var> があります。
+最初、箱 <var>i</var> にはボール <var>i</var> のみが入っています。</p>
+<p>ここに以下の操作が合計 <var>Q</var> 回行われるので、処理してください。</p>
+<p>操作にはタイプ <var>1,2,3</var> の <var>3</var> 種類があります。</p>
+<p>タイプ <var>1</var> : 箱 <var>X</var> に箱 <var>Y</var> の中身を全て入れる。 この操作では <var>X \neq Y</var> が保証される。</p>
+<pre>1 <var>X</var> <var>Y</var>
+</pre>
+<p>タイプ <var>2</var> : 現在いずれかの箱に入っているボールの数の合計を <var>k</var> とすると、箱 <var>X</var> にボール <var>k+1</var> を入れる。</p>
+<pre>2 <var>X</var>
+</pre>
+<p>タイプ <var>3</var> : ボール <var>X</var> が入っている箱の番号を答える。</p>
+<pre>3 <var>X</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li>入力は全て整数</li>
+<li><var>2 \le N \le 3 \times 10^5</var></li>
+<li><var>1 \le Q \le 3 \times 10^5</var></li>
+<li>タイプ <var>1</var> の操作について、 <var>1 \le X,Y \le N</var> かつ <var>X \neq Y</var></li>
+<li>タイプ <var>2</var> の操作について、 <var>1 \le X \le N</var></li>
+<li>タイプ <var>3</var> の操作について、その時点でボール <var>X</var> がいずれかの箱に入っている</li>
+<li>タイプ <var>3</var> の操作が少なくとも <var>1</var> つ与えられる</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。<br />
+但し、 <var>op_i</var> は <var>i</var> 回目の操作を表す。</p>
+<pre><var>N</var> <var>Q</var>
+<var>op_1</var>
+<var>op_2</var>
+<var>\vdots</var>
+<var>op_Q</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>各タイプ <var>3</var> の操作に対して、答えを <var>1</var> 行に <var>1</var> つ、整数として出力せよ。</p>
+</section>

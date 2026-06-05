@@ -1,0 +1,65 @@
+
+			
+
+
+	
+	
+
+			<span class="lang">
+<span class="lang-ja">
+<p>配点 : <var>400</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p><var>0</var> から <var>N-1</var> までの番号がつけられた <var>N</var> 個のマスが並んでいます。
+今から、すぬけくんが以下の手順に従って全てのマスに印をつけていきます。</p>
+<ol>
+<li>マス <var>0</var> に印をつける。</li>
+<li>
+次の i - iii の手順を <var>N−1</var> 回繰り返す。
+<ol type="i">
+<li>最後に印をつけたマスの番号を <var>A</var> としたとき、変数 <var>x</var> を <var>(A+D) \bmod N</var> で初期化する。</li>
+<li>マス <var>x</var> に印が付いている限り、 <var>x</var> を <var>(x+1) \bmod N</var> に更新することを繰り返す。</li>
+<li>マス <var>x</var> に印をつける。</li>
+</ol>
+</li>
+</ol>
+
+<p>すぬけくんが <var>K</var> 番目に印をつけるマスの番号を求めてください。</p>
+<p><var>T</var> 個のテストケースが与えられるので、それぞれについて答えを求めてください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1\leq T \leq 10^5</var></li>
+<li><var>1\leq K\leq N \leq 10^9</var></li>
+<li><var>1\leq D \leq 10^9</var></li>
+<li>入力は全て整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。ここで、<var>\mathrm{test}_i</var> は <var>i</var> 番目のテストケースを意味する。</p>
+<pre><var>T</var>
+<var>\mathrm{test}_1</var>
+<var>\mathrm{test}_2</var>
+<var>\vdots</var>
+<var>\mathrm{test}_T</var>
+</pre>
+<p>各テストケースは以下の形式で与えられる。</p>
+<pre><var>N</var> <var>D</var> <var>K</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p><var>T</var> 行出力せよ。</p>
+<p><var>i\ (1\leq i \leq T)</var> 行目には、<var>i</var> 番目のテストケースに対する答えを出力せよ。</p>
+</section>

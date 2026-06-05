@@ -1,0 +1,140 @@
+
+<p>配点 : <var>500</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><!-- 
+<var>N</var> 本の縦棒と、それらの間を結ぶ <var>M</var> 本の横棒からなるあみだくじがあります。
+各横棒は縦棒と垂直に引かれていて、その高さは相異なります。
+縦棒を左から順に <var>1,2,\dots,N</var>、横棒を上から順に <var>1,2,\dots,M</var> としたとき、
+横棒 <var>i\ (1 \leq i \leq M)</var> は縦棒 <var>A_i</var> と縦棒 <var>A_i+1</var> の間を結んでいます。
+
+縦棒 <var>1</var> の上端からあみだくじを下に辿っていったとき、最終的に到達する縦棒の番号を**スコア**と定義します。
+
+<var>i=1,2,\dots,M</var> について、以下の質問に答えてください。
+
+- 横棒 <var>i</var> を消したときのスコアを <var>S_i</var> と定義する。<var>S_i</var> を求めよ。
+
+なお、実際には横棒は消さないため、各質問は独立であることに注意してください。
+
+より厳密には、以下の通りです。
+-->
+
+<p><var>1</var> 以上 <var>N-1</var> 以下の整数からなる長さ <var>M</var> の数列 <var>A=(A_1,A_2,\dots,A_M)</var> が与えられます。
+<var>i=1,2,\dots,M</var> について、以下の質問に答えてください。</p>
+<ul>
+<li>数列 <var>B=(B_1,B_2,\dots,B_N)</var> がある。最初、各 <var>j</var> について <var>B_j=j</var> である。今から、<var>k=1,2,\dots,i-1,i+1,\dots,M</var> の順に以下の操作を行う
+（すなわち、<var>i</var> を除いた <var>1</var> 以上 <var>M</var> 以下の整数 <var>k</var> について、昇順に以下の操作を行う）。<ul>
+<li><var>B_{A_k}</var> と <var>B_{A_k+1}</var> の値を入れ替える。 </li>
+</ul>
+</li>
+<li>全ての操作が終了した段階で、<var>B_j=1</var> を満たす <var>j</var> の値を <var>S_i</var> と定義する。<var>S_i</var> を求めよ。</li>
+</ul>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>2 \leq N \leq 2\times 10^5</var></li>
+<li><var>1 \leq M \leq 2\times 10^5</var></li>
+<li><var>1 \leq A_i \leq N-1\ (1\leq i \leq M)</var></li>
+<li>入力は全て整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var> <var>M</var>
+<var>A_1</var> <var>A_2</var> <var>\dots</var> <var>A_M</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p><var>M</var> 行出力せよ。
+<var>i\ (1\leq i \leq M)</var> 行目には、<var>S_i</var> の値を整数として出力せよ。 </p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>5 4
+1 2 3 2
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>1
+3
+2
+4
+</pre>
+<p><var>i = 2</var> のとき、操作によって <var>B</var> は以下のように変化します。</p>
+<ul>
+<li>最初、<var>B = (1,2,3,4,5)</var></li>
+<li><var>k=1</var> として操作を行う。すなわち <var>B_1</var> と <var>B_2</var> の値を入れ替えて、<var>B = (2,1,3,4,5)</var></li>
+<li><var>k=3</var> として操作を行う。すなわち <var>B_3</var> と <var>B_4</var> の値を入れ替えて、<var>B = (2,1,4,3,5)</var></li>
+<li><var>k=4</var> として操作を行う。すなわち <var>B_2</var> と <var>B_3</var> の値を入れ替えて、<var>B = (2,4,1,3,5)</var></li>
+</ul>
+<p>全ての操作が終了した段階で <var>B_3=1</var> であるため、<var>S_2 = 3</var> です。</p>
+<p>同様に、</p>
+<ul>
+<li><var>i=1</var> のとき：<var>k=2,3,4</var> の順に操作を行うと <var>B=(1,4,3,2,5)</var> になるので、<var>S_1=1</var></li>
+<li><var>i=3</var> のとき：<var>k=1,2,4</var> の順に操作を行うと <var>B=(2,1,3,4,5)</var> になるので、<var>S_3=2</var> </li>
+<li><var>i=4</var> のとき：<var>k=1,2,3</var> の順に操作を行うと <var>B=(2,3,4,1,5)</var> になるので、<var>S_4=4</var></li>
+</ul>
+<p>です。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>3 3
+2 2 2
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>1
+1
+1
+</pre>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>10 10
+1 1 1 9 4 4 2 1 3 3
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>2
+2
+2
+3
+3
+3
+1
+3
+4
+4
+</pre></section>
+</div>

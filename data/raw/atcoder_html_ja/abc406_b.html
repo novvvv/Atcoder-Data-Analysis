@@ -1,0 +1,81 @@
+
+<p>配点 : <var>200</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>高橋君は電卓を持っています。電卓には最初 <var>1</var> が表示されています。<br />
+高橋君は電卓に対して <var>N</var> 回操作を行います。<br />
+<var>i</var> 回目 <var>(1\leq i\leq N)</var> の操作では、その時点で画面に表示されている数に正の整数 <var>A_i</var> をかけます。<br />
+しかし、電卓には <var>K</var> 桁までしか表示できないため、計算結果が <var>(K+1)</var> 桁以上になる場合、代わりに <var>1</var> が画面に表示されます。
+そうでない場合は正しく計算結果が表示されます。</p>
+<p><var>N</var> 回の操作の後に電卓に表示されている数を求めてください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1 \leq N \leq 100</var></li>
+<li><var>1 \leq K \leq 18</var></li>
+<li><var>1 \leq A_i &lt; 10^K</var></li>
+<li>入力はすべて整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var> <var>K</var>
+<var>A_1</var> <var>A_2</var> <var>\ldots</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p><var>N</var> 回の操作の後に電卓に表示されている数を出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>5 2
+7 13 3 2 5
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>10
+</pre>
+<p>今回電卓は <var>2</var> 桁まで表示することができ、最初 <var>1</var> が表示されています。これに対して、次のように高橋君は操作を行います。</p>
+<ul>
+<li><var>1</var> 回目の操作で、<var>7</var> をかけます。<var>1\times 7=7</var> であり、電卓には <var>7</var> が表示されます。</li>
+<li><var>2</var> 回目の操作で、<var>13</var> をかけます。<var>7\times 13=91</var> であり、電卓には <var>91</var> が表示されます。</li>
+<li><var>3</var> 回目の操作で、<var>3</var> をかけます。<var>91\times 3=273</var> であり、<var>3</var> 桁になってしまうため、電卓には <var>1</var> が表示されます。</li>
+<li><var>4</var> 回目の操作で、<var>2</var> をかけます。<var>1\times 2=2</var> であり、電卓には <var>2</var> が表示されます。</li>
+<li><var>5</var> 回目の操作で、<var>5</var> をかけます。<var>2\times 5=10</var> であり、電卓には <var>10</var> が表示されます。</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>2 1
+2 5
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>1
+</pre></section>
+</div>

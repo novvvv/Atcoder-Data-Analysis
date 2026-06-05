@@ -1,0 +1,133 @@
+
+<p>配点 : <var>600</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p><var>N</var> 頂点 <var>M</var> 辺の単純連結無向グラフがあります。<br />
+頂点には頂点 <var>1</var>, 頂点 <var>2</var>, <var>\dots</var>, 頂点 <var>N</var> と番号が振られています。<br />
+辺には 辺 <var>1</var>, 辺 <var>2</var>, <var>\dots</var>, 辺 <var>M</var> と番号が振られています。辺 <var>i</var> は頂点 <var>a_i</var> と頂点 <var>b_i</var> を双方向に結んでいます。また、頂点 <var>1</var> と頂点 <var>N</var> を直接結ぶ辺は存在しません。<br />
+各頂点の状態は「何もない頂点」か「壁がある頂点」のいずれかです。はじめ、全ての頂点は何もない頂点です。</p>
+<p>青木君は頂点 <var>1</var> を出発して、グラフ上を辺に沿って移動して頂点 <var>N</var> へ行こうとしています。ただし、壁がある頂点への移動を行うことはできません。</p>
+<p>高橋君は、青木君が移動を開始する前にいくつかの頂点を選んで壁を建てることで、青木君がどのように移動しても頂点 <var>N</var> へ行くことができないようにすることにしました。<br />
+高橋君が頂点 <var>i</var> に壁を建てるには <var>c_i</var> 円を払う必要があります。また、<strong>頂点 <var>1</var> および頂点 <var>N</var> には壁を建てられません。</strong></p>
+<p>高橋君が条件を満たすように壁を建てるときに最小で何円払う必要があるでしょうか。また、その時の壁の立て方を <var>1</var> つ出力してください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>3 \leq N \leq 100</var></li>
+<li><var>N - 1 \leq M \leq \frac{N(N-1)}{2} - 1</var></li>
+<li><var>1 \leq a_i \lt b_i \leq N</var> <var>(1 \leq i \leq M)</var></li>
+<li><var>(a_i, b_i) \neq (1, N)</var></li>
+<li>与えられるグラフは単純かつ連結である。</li>
+<li><var>1 \leq c_{i} \leq 10^9</var> <var>(2 \leq i \leq N-1)</var></li>
+<li><var>c_1 = c_N = 0</var></li>
+<li>入力はすべて整数である。</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var> <var>M</var>
+<var>a_1</var> <var>b_1</var>
+<var>a_2</var> <var>b_2</var>
+<var>\vdots</var>
+<var>a_M</var> <var>b_M</var>
+<var>c_1</var> <var>c_2</var> <var>\dots</var> <var>c_N</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>以下の形式に従って出力せよ。ここで、<var>C,k,p_i</var> は次に定める通りとする。</p>
+<ul>
+<li><var>C</var> は高橋君が支払う金額</li>
+<li><var>k</var> は高橋君が壁を建てる頂点の個数</li>
+<li><var>(p_1,p_2,\dots,p_k)</var> は高橋君が壁を建てる頂点からなる列</li>
+</ul>
+<pre><var>C</var>
+<var>k</var>
+<var>p_1</var> <var>p_2</var> <var>\dots</var> <var>p_k</var>
+</pre>
+<p>最小の金額で条件を満たす建て方が複数存在する場合はどれを出力してもよい。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>5 5
+1 2
+2 3
+3 5
+2 4
+4 5
+0 8 3 4 0
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>7
+2
+3 4
+</pre>
+<p>高橋君が <var>3 + 4 = 7</var> 円を払って頂点 <var>3</var>, 頂点 <var>4</var> に壁を建てると青木君は頂点 <var>1</var> から頂点 <var>5</var> へ行くことができなくなります。<br />
+これより少ない金額で条件を満たすことはできないので <var>7</var> 円が答えとなります。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>3 2
+1 2
+2 3
+0 1 0
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>1
+1
+2
+</pre>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>5 9
+1 2
+1 3
+1 4
+2 3
+2 4
+2 5
+3 4
+3 5
+4 5
+0 1000000000 1000000000 1000000000 0
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>3000000000
+3
+2 3 4
+</pre></section>
+</div>

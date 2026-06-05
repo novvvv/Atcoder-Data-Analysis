@@ -1,0 +1,75 @@
+tag,year,problem_count,problems_in_year,share_pct,slot_scope
+bfs,2021,1,40,2.5,C-F
+bfs,2022,5,76,6.58,C-F
+bfs,2023,12,116,10.34,C-F
+bfs,2024,5,72,6.94,C-F
+bfs,2025,4,44,9.09,C-F
+binary search,2021,4,40,10.0,C-F
+binary search,2022,5,76,6.58,C-F
+binary search,2023,7,116,6.03,C-F
+binary search,2024,9,72,12.5,C-F
+binary search,2025,3,44,6.82,C-F
+combinatorics,2021,6,40,15.0,C-F
+combinatorics,2022,4,76,5.26,C-F
+combinatorics,2023,11,116,9.48,C-F
+combinatorics,2025,3,44,6.82,C-F
+counting,2021,7,40,17.5,C-F
+counting,2022,7,76,9.21,C-F
+counting,2023,16,116,13.79,C-F
+counting,2024,6,72,8.33,C-F
+counting,2025,9,44,20.45,C-F
+dp,2021,10,40,25.0,C-F
+dp,2022,18,76,23.68,C-F
+dp,2023,23,116,19.83,C-F
+dp,2024,12,72,16.67,C-F
+dp,2025,6,44,13.64,C-F
+graph,2021,4,40,10.0,C-F
+graph,2022,6,76,7.89,C-F
+graph,2023,12,116,10.34,C-F
+graph,2024,3,72,4.17,C-F
+graph,2025,2,44,4.55,C-F
+graph theory,2021,3,40,7.5,C-F
+graph theory,2022,7,76,9.21,C-F
+graph theory,2023,8,116,6.9,C-F
+graph theory,2024,5,72,6.94,C-F
+graph theory,2025,3,44,6.82,C-F
+greedy,2021,6,40,15.0,C-F
+greedy,2022,9,76,11.84,C-F
+greedy,2023,20,116,17.24,C-F
+greedy,2024,16,72,22.22,C-F
+greedy,2025,6,44,13.64,C-F
+grid,2021,1,40,2.5,C-F
+grid,2022,4,76,5.26,C-F
+grid,2023,12,116,10.34,C-F
+grid,2024,8,72,11.11,C-F
+grid,2025,5,44,11.36,C-F
+implementation,2021,8,40,20.0,C-F
+implementation,2022,17,76,22.37,C-F
+implementation,2023,28,116,24.14,C-F
+implementation,2024,11,72,15.28,C-F
+implementation,2025,9,44,20.45,C-F
+modular arithmetic,2021,6,40,15.0,C-F
+modular arithmetic,2022,7,76,9.21,C-F
+modular arithmetic,2023,19,116,16.38,C-F
+modular arithmetic,2024,5,72,6.94,C-F
+modular arithmetic,2025,4,44,9.09,C-F
+prefix sum,2021,2,40,5.0,C-F
+prefix sum,2022,6,76,7.89,C-F
+prefix sum,2023,11,116,9.48,C-F
+prefix sum,2024,9,72,12.5,C-F
+prefix sum,2025,4,44,9.09,C-F
+simulation,2021,2,40,5.0,C-F
+simulation,2022,7,76,9.21,C-F
+simulation,2023,18,116,15.52,C-F
+simulation,2024,7,72,9.72,C-F
+simulation,2025,9,44,20.45,C-F
+sorting,2021,9,40,22.5,C-F
+sorting,2022,4,76,5.26,C-F
+sorting,2023,16,116,13.79,C-F
+sorting,2024,7,72,9.72,C-F
+sorting,2025,6,44,13.64,C-F
+string,2021,2,40,5.0,C-F
+string,2022,9,76,11.84,C-F
+string,2023,13,116,11.21,C-F
+string,2024,7,72,9.72,C-F
+string,2025,4,44,9.09,C-F

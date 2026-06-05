@@ -1,0 +1,120 @@
+
+<p>配点 : <var>525</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>右向きを <var>x</var> 軸正方向、上向きを <var>y</var> 軸正方向とする座標平面の原点にロボットがいます。ロボットは最初、<var>x</var> 軸正方向を向いています。</p>
+<p><var>i=1,\ldots,N</var> の順に以下の操作を行います：</p>
+<ul>
+<li>ロボットを右回りまたは左回りに <var>90</var> 度回転させる。その後、ロボットは向いている方向に <var>A_i</var> 進む</li>
+</ul>
+<p>回転方向を適切に選ぶことで、<var>N</var> 回の操作後にロボットがいる座標を <var>(X,Y)</var> にすることはできますか？</p>
+<p>できるならば、各操作において、右回りと左回りのどちらを選べばよいか求めてください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1 \leq N \leq 80</var></li>
+<li><var>1 \leq A_i \leq 10^7</var></li>
+<li><var>-10^9\leq X,Y \leq 10^9</var></li>
+<li>入力は全て整数である</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var> <var>X</var> <var>Y</var>
+<var>A_1</var> <var>\ldots</var> <var>A_N</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p><var>N</var> 回の操作後にロボットがいる座標を <var>(X,Y)</var> にできないとき、<code>No</code> と出力せよ。<br />
+<var>N</var> 回の操作後にロボットがいる座標を <var>(X,Y)</var> にできるとき、1行目に <code>Yes</code> と出力し、2行目に次の条件を満たす長さ <var>N</var> の文字列 <var>S</var> を出力せよ。<br />
+条件： <var>S</var> は <code>L</code> または <code>R</code> のみからなり、<var>S</var> の <var>i</var> 番目の文字が <code>L</code> ならば <var>i</var> 回目の操作においてロボットを左回りに、<code>R</code> ならばロボットを右回りに回転させることで、<var>N</var> 回の操作後にロボットがいる座標を <var>(X,Y)</var> にできる。</p>
+<p>答えが複数ある場合はどれを出力しても正解となる。  </p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>3 -2 4
+3 2 1
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>Yes
+LLR
+</pre>
+<p>最初ロボットは <var>(0,0)</var> にいて、<var>x</var> 軸正方向を向いています。次の手順により、<var>N</var> 回の操作後にロボットがいる座標を <var>(X,Y)</var> にできます。</p>
+<ul>
+<li><var>1</var> 回目の操作：ロボットを左に <var>90</var> 度回転させ、<var>y</var> 軸正方向を向かせる。ロボットは向いている方向に <var>A_1=3</var> 進み、ロボットのいる座標は <var>(0,3)</var> となる。</li>
+<li><var>2</var> 回目の操作：ロボットを左に <var>90</var> 度回転させ、<var>x</var> 軸負方向を向かせる。ロボットは向いている方向に <var>A_2=2</var> 進み、ロボットのいる座標は <var>(-2,3)</var> となる。</li>
+<li><var>3</var> 回目の操作：ロボットを右に <var>90</var> 度回転させ、<var>y</var> 軸正方向を向かせる。ロボットは向いている方向に <var>A_3=1</var> 進み、ロボットのいる座標は <var>(-2,4)</var> となる。</li>
+</ul>
+<p><img alt="図" src="https://img.atcoder.jp/abc326/79baf4537d56c0df5c5d254e6e7f9616.png" /></p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>1 0 0
+1
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>No
+</pre>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>4 0 0
+1 1 1 1
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>Yes
+LRRR
+</pre>
+<p><code>LLLL</code> や <code>RRRR</code> などでも正解となります。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 4</h3><pre>14 2543269 -1705099
+3 14 159 2653 58979 323846 2643383 2795028 841971 69399 37510 58 20 9
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 4</h3><pre>Yes
+LLLLLLLLLRLRRR
+</pre></section>
+</div>

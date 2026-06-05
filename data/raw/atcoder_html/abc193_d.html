@@ -1,0 +1,53 @@
+
+			
+
+
+	
+	
+
+			<span class="lang">
+<span class="lang-ja">
+<p>配点 : <var>400</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p><var>1, 2, \dots, 9</var> が表に書かれたカードが <var>K</var> 枚ずつ、計 <var>9K</var> 枚のカードがあります。<br />
+これらのカードをランダムにシャッフルして、高橋くんと青木くんにそれぞれ、<var>4</var> 枚を表向きに、<var>1</var> 枚を裏向きにして配りました。<br />
+高橋くんに配られたカードが文字列 <var>S</var> として、青木くんに配られたカードが文字列 <var>T</var> として与えられます。<br />
+<var>S, T</var> は <var>5</var> 文字の文字列で、先頭 <var>4</var> 文字は <code>1</code>, <code>2</code>, <var>\dots</var>, <code>9</code> からなり、表向きのカードに書かれた数を表します。
+末尾 <var>1</var> 文字は <code>#</code> であり、裏向きのカードであることを表します。<br />
+<var>5</var> 枚の手札の点数を、<var>c_i</var> をその手札に含まれる <var>i</var> の枚数として、<var>\displaystyle \sum_{i=1}^9 i \times 10^{c_i}</var> で定義します。<br />
+高橋くんが青木くんより点数の高い手札を持っていたら高橋くんの勝ちです。<br />
+高橋くんの勝つ確率を求めてください。 </p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>2 ≤ K ≤ 10^5</var></li>
+<li><var>|S| = |T| = 5</var></li>
+<li><var>S, T</var> の <var>1</var> 文字目から <var>4</var> 文字目は <code>1</code>, <code>2</code>, <var>\dots</var>, <code>9</code> のいずれか</li>
+<li><code>1</code>, <code>2</code>, <var>\dots</var>, <code>9</code> はそれぞれ、<var>S</var> と <var>T</var> に合計 <var>K</var> 回までしか出現しない</li>
+<li><var>S, T</var> の <var>5</var> 文字目は <code>#</code></li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>K</var>
+<var>S</var>
+<var>T</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>高橋くんの勝つ確率を小数で出力せよ。<br />
+想定解答との絶対誤差または相対誤差が <var>10^{-5}</var> 以下であれば正解と判定される。</p>
+</section>

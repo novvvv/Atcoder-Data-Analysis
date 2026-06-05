@@ -1,0 +1,104 @@
+
+<p>配点 : <var>200</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>AtCoder 国の暦では、一年は <var>1,2,\dots,M</var> 番目の月の <var>M</var> か月からなり、そのうち <var>i</var> 番目の月は <var>1,2,\dots,D_i</var> 番目の日の <var>D_i</var> 日からなります。<br />
+さらに、 AtCoder 国の一年の日数は奇数、即ち <var>D_1+D_2+\dots+D_M</var> は奇数です。<br />
+一年の真ん中の日は何番目の月の何番目の日か求めてください。<br />
+言い換えると、 <var>1</var> 番目の月の <var>1</var> 番目の日を <var>1</var> 日目としたときの <var>(D_1+D_2+\dots+D_M+1)/2</var> 日目が何番目の月の何番目の日かを求めてください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li>入力は全て整数</li>
+<li><var>1 \le M \le 100</var></li>
+<li><var>1 \le D_i \le 100</var></li>
+<li><var>D_1 + D_2 + \dots + D_M</var> は奇数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>M</var>
+<var>D_1</var> <var>D_2</var> <var>\dots</var> <var>D_M</var>
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>答えが <var>a</var> 番目の月の <var>b</var> 番目の日であるとき、以下の形式で出力せよ。</p>
+<pre><var>a</var> <var>b</var>
+</pre>
+
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>12
+31 28 31 30 31 30 31 31 30 31 30 31
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>7 2
+</pre>
+
+<p>この入力では、 <var>1</var> 年は <var>31+28+31+30+31+30+31+31+30+31+30+31=365</var> 日からなります。<br />
+真ん中の日は <var>(365+1)/2 = 183</var> 日目であり、これを求めることを考えます。  </p>
+<ul>
+<li><var>1,2,3,4,5,6</var> 番目の月に含まれる日数の合計は <var>181</var> 日です。</li>
+<li><var>7</var> 番目の月の <var>1</var> 番目の日は <var>182</var> 日目です。</li>
+<li><var>7</var> 番目の月の <var>2</var> 番目の日は <var>183</var> 日目です。</li>
+</ul>
+<p>以上から、答えが <var>7</var> 番目の月の <var>2</var> 番目の日であることが分かります。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>1
+1
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>1 1
+</pre>
+
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>6
+3 1 4 1 5 9
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>5 3
+</pre></section>
+</div>

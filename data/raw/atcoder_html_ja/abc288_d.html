@@ -1,0 +1,109 @@
+
+<p>配点 : <var>400</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>長さ <var>N</var> の整数列 <var>A = (A_1, A_2, \ldots, A_N)</var> と正整数 <var>K</var> が与えられます。</p>
+<p>各 <var>i = 1, 2, \ldots, Q</var> について、<var>A</var> の連続部分列 <var>(A_{l_i}, A_{l_i+1}, \ldots, A_{r_i})</var> が<strong>良い数列</strong>かどうかを判定してください。</p>
+<p>ここで、長さ <var>n</var> の数列 <var>X = (X_1, X_2, \ldots, X_n)</var> は、下記の操作を好きな回数（ <var>0</var> 回でも良い）だけ行うことによって、<var>X</var> のすべての要素を <var>0</var> にすることができるとき、かつ、そのときに限り<strong>良い数列</strong>です。</p>
+<blockquote>
+<p><var>1 \leq i \leq n-K+1</var> を満たす整数 <var>i</var> および、整数 <var>c</var> （負の数でも良い）を選び、<var>K</var> 個の要素 <var>X_{i}, X_{i+1}, \ldots, X_{i+K-1}</var> のそれぞれに <var>c</var> を加算する。</p>
+</blockquote>
+<p>なお、すべての <var>i = 1, 2, \ldots, Q</var> について、<var>r_i - l_i + 1 \geq K</var> が保証されます。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>1 \leq K \leq \min\lbrace 10, N \rbrace</var></li>
+<li><var>-10^9 \leq A_i \leq 10^9</var></li>
+<li><var>1 \leq Q \leq 2 \times 10^5</var></li>
+<li><var>1 \leq l_i, r_i \leq N</var></li>
+<li><var>r_i-l_i+1 \geq K</var></li>
+<li>入力はすべて整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var> <var>K</var>
+<var>A_1</var> <var>A_2</var> <var>\ldots</var> <var>A_N</var>
+<var>Q</var>
+<var>l_1</var> <var>r_1</var>
+<var>l_2</var> <var>r_2</var>
+<var>\vdots</var>
+<var>l_Q</var> <var>r_Q</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p><var>Q</var> 行出力せよ。
+<var>i = 1, 2, \ldots, Q</var> について、<var>i</var> 行目には数列 <var>(A_{l_i}, A_{l_i+1}, \ldots, A_{r_i})</var> が良い数列である場合は <code>Yes</code> を、
+そうでない場合は <code>No</code> を出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>7 3
+3 -1 1 -2 2 0 5
+2
+1 6
+2 7
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>Yes
+No
+</pre>
+<p>数列 <var>X \coloneqq (A_1, A_2, A_3, A_4, A_5, A_6) = (3, -1, 1, -2, 2, 0)</var> は良い数列です。
+実際、下記の手順で操作を行うことで、すべての要素を <var>0</var> にすることができます。</p>
+<ul>
+<li>まず、<var>i = 2, c = 4</var> として操作を行う。その結果、<var>X = (3, 3, 5, 2, 2, 0)</var> となる。</li>
+<li>次に、<var>i = 3, c = -2</var> として操作を行う。その結果、<var>X = (3, 3, 3, 0, 0, 0)</var> となる。</li>
+<li>最後に、<var>i = 1, c = -3</var> として操作を行う。その結果、<var>X = (0, 0, 0, 0, 0, 0)</var> となる。</li>
+</ul>
+<p>よって、<var>1</var> 行目には <code>Yes</code> を出力します。</p>
+<p>一方、数列 <var>(A_2, A_3, A_4, A_5, A_6, A_7) = (-1, 1, -2, 2, 0, 5)</var> は、
+どのような手順で操作を行ってもすべての要素を <var>0</var> にすることはできないため、良い数列ではありません。
+よって、<var>2</var> 行目には <code>No</code> を出力します。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>20 4
+-19 -66 -99 16 18 33 32 28 26 11 12 0 -16 4 21 21 37 17 55 -19
+5
+13 16
+4 11
+3 12
+13 18
+4 10
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>No
+Yes
+No
+Yes
+No
+</pre></section>
+</div>

@@ -1,0 +1,101 @@
+
+<p>配点 : <var>300</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>あなたはゲームをプレイしています。</p>
+<p><var>N</var> 人の敵が一列に並んでおり、前から <var>i</var> 番目の敵の体力は <var>H_i</var> です。</p>
+<p>あなたは <var>0</var> で初期化された変数 <var>T</var> を使い、全ての敵の体力が <var>0</var> 以下になるまで次の行動を繰り返します。</p>
+<ul>
+<li><var>T</var> を <var>1</var> 増やす。その後、体力が <var>1</var> 以上である最も前の敵を攻撃する。このとき、<var>T</var> が <var>3</var> の倍数ならばその敵の体力は <var>3</var> 減り、そうでないなら <var>1</var> 減る。</li>
+</ul>
+<p>全ての敵の体力が <var>0</var> 以下になったときの <var>T</var> の値を求めてください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1 \leq N \leq 2\times 10^5</var></li>
+<li><var>1 \leq H_i \leq 10^9</var></li>
+<li>入力は全て整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var>
+<var>H_1</var> <var>H_2</var> <var>\ldots</var> <var>H_N</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>答えを出力せよ。  </p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>3
+6 2 2
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>8
+</pre>
+<p>行動は次のように行われます。</p>
+<ul>
+<li><var>T=1</var> になる。<var>1</var> 番目の敵を攻撃し、その敵の体力は <var>6-1=5</var> となる。</li>
+<li><var>T=2</var> になる。<var>1</var> 番目の敵を攻撃し、その敵の体力は <var>5-1=4</var> となる。</li>
+<li><var>T=3</var> になる。<var>1</var> 番目の敵を攻撃し、その敵の体力は <var>4-3=1</var> となる。</li>
+<li><var>T=4</var> になる。<var>1</var> 番目の敵を攻撃し、その敵の体力は <var>1-1=0</var> となる。</li>
+<li><var>T=5</var> になる。<var>2</var> 番目の敵を攻撃し、その敵の体力は <var>2-1=1</var> となる。</li>
+<li><var>T=6</var> になる。<var>2</var> 番目の敵を攻撃し、その敵の体力は <var>1-3=-2</var> となる。</li>
+<li><var>T=7</var> になる。<var>3</var> 番目の敵を攻撃し、その敵の体力は <var>2-1=1</var> となる。</li>
+<li><var>T=8</var> になる。<var>3</var> 番目の敵を攻撃し、その敵の体力は <var>1-1=0</var> となる。</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>9
+1 12 123 1234 12345 123456 1234567 12345678 123456789
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>82304529
+</pre>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>5
+1000000000 1000000000 1000000000 1000000000 1000000000
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>3000000000
+</pre>
+<p>オーバーフローに注意してください。</p></section>
+</div>

@@ -1,0 +1,88 @@
+
+<p>配点 : <var>600</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p><var>T</var> 個のテストケースについて以下の問題を解いてください。</p>
+<p><var>xy</var> 座標平面上の原点 <var>(0,0)</var> に駒が置かれています。あなたは次の操作を <var>0</var> 回以上何度でも行うことが出来ます。</p>
+<ul>
+<li><var>1 \leq i \leq 8</var> かつ <var>s_i=</var> <code>1</code> を満たす整数 <var>i</var> を選ぶ。現在駒が置かれている座標を <var>(x,y)</var> とした時、<ul>
+<li><var>i=1</var> ならば駒を <var>(x+1,y)</var> に移動させる。</li>
+<li><var>i=2</var> ならば駒を <var>(x+1,y+1)</var> に移動させる。</li>
+<li><var>i=3</var> ならば駒を <var>(x,y+1)</var> に移動させる。</li>
+<li><var>i=4</var> ならば駒を <var>(x-1,y+1)</var> に移動させる。</li>
+<li><var>i=5</var> ならば駒を <var>(x-1,y)</var> に移動させる。</li>
+<li><var>i=6</var> ならば駒を <var>(x-1,y-1)</var> に移動させる。</li>
+<li><var>i=7</var> ならば駒を <var>(x,y-1)</var> に移動させる。</li>
+<li><var>i=8</var> ならば駒を <var>(x+1,y-1)</var> に移動させる。</li>
+</ul>
+</li>
+</ul>
+<p>あなたの目的は駒を <var>(A,B)</var> に移動させることです。<br />
+目的を達成するために必要な操作回数の最小値を求めてください。ただし、目的を達成することが不可能な場合は代わりに <code>-1</code> を出力してください。  </p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1 \leq T \leq 10^4</var></li>
+<li><var>-10^9 \leq A,B \leq 10^9</var></li>
+<li><var>s_i</var> は <code>0</code> または <code>1</code></li>
+<li><var>T,A,B</var> は整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>T</var>
+<var>\mathrm{case}_1</var>
+<var>\mathrm{case}_2</var>
+<var>\vdots</var>
+<var>\mathrm{case}_T</var>
+</pre>
+<p>ただし、<var>\mathrm{case}_i</var> は <var>i</var> 番目のテストケースを表す。  </p>
+<p>各テストケースは以下の形式で与えられる。</p>
+<pre><var>A</var> <var>B</var> <var>s_1 s_2 s_3 s_4 s_5 s_6 s_7 s_8</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>全体で <var>T</var> 行出力せよ。<br />
+<var>i</var> 行目には <var>i</var> 番目のテストケースに対する答えを出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>7
+5 3 10101010
+5 3 01010101
+5 3 11111111
+5 3 00000000
+0 0 11111111
+0 1 10001111
+-1000000000 1000000000 10010011
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>8
+5
+5
+-1
+0
+-1
+1000000000
+</pre></section>
+</div>

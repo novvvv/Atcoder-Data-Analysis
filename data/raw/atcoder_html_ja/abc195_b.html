@@ -1,0 +1,95 @@
+
+<p>配点 : <var>200</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>みかんがたくさんあります。どのみかんの重さも <var>A</var> グラム以上 <var>B</var> グラム以下であることがわかっています。（みかんの重さは整数とは限りません。）</p>
+<p>この中からいくつかのみかんを選んだところ、選んだみかんの重さの合計がちょうど <var>W</var> キログラムになりました。</p>
+<p>選んだみかんの個数として考えられる最小値と最大値を求めてください。ただし、このようなことが起こり得ないなら、かわりにそのことを報告してください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1 \leq A \leq B \leq 1000</var></li>
+<li><var>1 \leq W \leq 1000</var></li>
+<li>入力は全て整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>A</var> <var>B</var> <var>W</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>選んだみかんの個数としてありえる最小値と最大値を空白区切りでこの順に出力せよ。ただし、与えられた条件に合うような個数が存在しない場合、かわりに <code>UNSATISFIABLE</code> と出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>100 200 2
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>10 20
+</pre>
+<p>みかん <var>1</var> 個の重さは <var>100</var> グラム以上 <var>200</var> グラム以下です。</p>
+<ul>
+<li><var>200</var> グラムのみかんを <var>10</var> 個選んだとき、重さの合計はちょうど <var>2</var> キログラムになります</li>
+<li><var>100</var> グラムのみかんを <var>20</var> 個選んだとき、重さの合計はちょうど <var>2</var> キログラムになります</li>
+</ul>
+<p><var>9</var> 個以下または <var>21</var> 個以上でちょうど <var>2</var> キログラムになることはないので、<var>10</var> 個と <var>20</var> 個がそれぞれ最小値と最大値になります。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>120 150 2
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>14 16
+</pre>
+<p>みかん <var>1</var> 個の重さは <var>120</var> グラム以上 <var>150</var> グラム以下です。</p>
+<ul>
+<li>例えば <var>140</var> グラムのみかん <var>10</var> 個と、<var>150</var> グラムのみかん <var>4</var> 個を選んだとき、重さの合計はちょうど <var>2</var> キログラムになります</li>
+<li>例えば <var>120</var> グラムのみかん <var>8</var> 個と、<var>130</var> グラムのみかん <var>8</var> 個を選んだとき、重さの合計はちょうど <var>2</var> キログラムになります</li>
+</ul>
+<p><var>13</var> 個以下または <var>17</var> 個以上でちょうど <var>2</var> キログラムになることはないので、<var>14</var> 個と <var>16</var> 個がそれぞれ最小値と最大値になります。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>300 333 1
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>UNSATISFIABLE
+</pre>
+<p>みかん <var>1</var> 個の重さは <var>300</var> グラム以上 <var>333</var> グラム以下です。</p>
+<p>このようなみかんいくつかの重さの合計がちょうど <var>1</var> キログラムになることはありえません。</p></section>
+</div>

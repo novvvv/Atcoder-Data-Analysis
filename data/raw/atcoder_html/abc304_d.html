@@ -1,0 +1,73 @@
+
+			
+
+
+	
+	
+
+			<span class="lang">
+<span class="lang-ja">
+<p>配点 : <var>400</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p><var>xy</var> -平面上にいくつかのイチゴが載った長方形のケーキがあります。
+ケーキは、長方形領域 <var>\lbrace (x, y) : 0 \leq x \leq W, 0 \leq y \leq H \rbrace</var> をちょうど占めます。</p>
+<p>ケーキには <var>N</var> 個のイチゴが載っており、<var>i = 1, 2, \ldots, N</var> について、<var>i</var> 番目のイチゴの座標は <var>(p_i, q_i)</var> です。
+<var>2</var> 個以上のイチゴが同一の座標にあることはありません。</p>
+<p>高橋君は、このケーキを包丁で下記の通りにいくつかのピースに切り分けます。</p>
+<ul>
+<li>まず、ケーキを通る <var>y</var> 軸に並行な <var>A</var> 本の異なる直線、直線 <var>x = a_1</var> 、直線 <var>x = a_2</var> 、<var>\ldots</var> 、直線 <var>x = a_A</var> のそれぞれにそってケーキを切る。</li>
+<li>次に、ケーキを通る <var>x</var> 軸に並行な <var>B</var> 本の異なる直線、直線 <var>y = b_1</var> 、直線 <var>y = b_2</var> 、<var>\ldots</var> 、直線 <var>y = b_B</var> のそれぞれにそってケーキを切る。</li>
+</ul>
+<p>その結果、ケーキは <var>(A+1)(B+1)</var> 個の長方形のピースに分割されます。
+高橋君はそれらのうちのいずれか <var>1</var> 個だけを選んで食べます。
+高橋君が選んだピースに載っているイチゴの個数としてあり得る最小値と最大値をそれぞれ出力してください。</p>
+<p>ここで、最終的にピースの縁となる位置にはイチゴが存在しないことが保証されます。
+より形式的な説明は下記の制約を参照してください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>3 \leq W, H \leq 10^9</var></li>
+<li><var>1 \leq N \leq 2 \times 10^5</var></li>
+<li><var>0 \lt p_i \lt W</var></li>
+<li><var>0 \lt q_i \lt H</var></li>
+<li><var>i \neq j \implies (p_i, q_i) \neq (p_j, q_j)</var></li>
+<li><var>1 \leq A, B \leq 2 \times 10^5</var></li>
+<li><var>0 \lt a_1 \lt a_2 \lt \cdots \lt a_A \lt W</var></li>
+<li><var>0 \lt b_1 \lt b_2 \lt \cdots \lt b_B \lt H</var></li>
+<li><var>p_i \not \in \lbrace a_1, a_2, \ldots, a_A \rbrace</var></li>
+<li><var>q_i \not \in \lbrace b_1, b_2, \ldots, b_B \rbrace</var></li>
+<li>入力はすべて整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>W</var> <var>H</var>
+<var>N</var>
+<var>p_1</var> <var>q_1</var>
+<var>p_2</var> <var>q_2</var>
+<var>\vdots</var>
+<var>p_N</var> <var>q_N</var>
+<var>A</var>
+<var>a_1</var> <var>a_2</var> <var>\ldots</var> <var>a_A</var>
+<var>B</var>
+<var>b_1</var> <var>b_2</var> <var>\ldots</var> <var>b_B</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>高橋君が選んだピースに載っているイチゴの個数としてあり得る最小値 <var>m</var> と最大値 <var>M</var> をそれぞれ、下記の形式の通り空白区切りで出力せよ。</p>
+<pre><var>m</var> <var>M</var>
+</pre>
+</section>

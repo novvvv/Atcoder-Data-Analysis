@@ -1,0 +1,55 @@
+
+			
+
+
+	
+	
+
+			<span class="lang">
+<span class="lang-ja">
+<p>配点 : <var>350</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>左右一列に <var>N</var> 個のマスが並んでいます。
+最初、すべてのマスは白く塗られています。</p>
+<p><var>Q</var> 個のクエリを順に処理してください。<var>i</var> 個目のクエリでは <var>1</var> 以上 <var>N</var> 以下の整数 <var>A_i</var> が与えられ、次の操作を行います。</p>
+<blockquote>
+<p>左から <var>A_i</var> 番目のマスの色を反転させる。
+具体的には、左から <var>A_i</var> 番目のマスが、白く塗られていたならば黒く塗り、黒く塗られていたならば白く塗る。<br />
+その後、黒く塗られたマスが連続している区間の個数を求める。</p>
+<p>ここで、黒く塗られたマスが連続している区間とは次をすべてみたす整数の組 <var>(l,r)</var> <var>(1\leq l\leq r\leq N)</var> を指す。</p>
+<ul>
+<li>左から <var>l, l+1, \ldots, r</var> 番目のマスはすべて黒く塗られている。</li>
+<li><var>l=1</var> であるか、または左から <var>(l-1)</var> 番目のマスは白く塗られている。</li>
+<li><var>r=N</var> であるか、または左から <var>(r+1)</var> 番目のマスは白く塗られている。</li>
+</ul>
+</blockquote>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1\leq N,Q\leq 5\times 10^5</var></li>
+<li><var>1\leq A_i\leq N</var></li>
+<li>入力はすべて整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var> <var>Q</var>
+<var>A_1</var> <var>A_2</var> <var>\ldots</var> <var>A_Q</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p><var>Q</var> 行出力せよ。<var>i</var> 行目 <var>(1\leq i\leq Q)</var> には <var>i</var> 個目のクエリの答えを出力せよ。</p>
+</section>

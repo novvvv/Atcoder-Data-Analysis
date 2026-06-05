@@ -1,0 +1,66 @@
+
+			
+
+
+	
+	
+
+			<span class="lang">
+<span class="lang-ja">
+<p>配点 : <var>250</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p><var>H</var> 行 <var>W</var> 列のグリッドがあります。</p>
+<p>グリッドの各マスは<strong>陸</strong>か<strong>海</strong>のどちらかであり、
+その情報は <var>H</var> 個の長さ <var>W</var> の文字列 <var>S_1, S_2, \ldots, S_H</var> で与えられます。
+上から <var>i</var> 行目、左から <var>j</var> 列目のマスを <var>(i, j)</var> で表すと、
+<var>S_i</var> の <var>j</var> 文字目が <code>.</code> のときマス <var>(i, j)</var> は陸であり、<code>#</code> のときマス <var>(i, j)</var> は海です。</p>
+<p>ここで、グリッドの外周のマス（すなわち、<var>i = 1</var> 、<var>i = H</var> 、<var>j = 1</var> 、<var>j = W</var> のうち少なくとも <var>1</var> 個以上を満たすマス <var>(i, j)</var> ）については、すべて海であることが制約として保証されます。</p>
+<p>高橋君が乗った宇宙船が、グリッド上のあるマスに不時着してしまいました。
+その後、高橋君は <code>L</code> 、<code>R</code> 、<code>U</code> 、<code>D</code> のみからなる長さ <var>N</var> の文字列 <var>T</var> で表される手順に沿って、グリッド上を <var>N</var> 回移動しました。
+<var>i = 1, 2, \ldots, N</var> について、<var>T</var> の <var>i</var> 文字目は <var>i</var> 回目の移動の内容を下記の通り表します。</p>
+<ul>
+<li><code>L</code> のとき、左に <var>1</var> マス移動したことを表す。すなわち、移動前のマスを <var>(i, j)</var> とするとき、移動後のマスは <var>(i, j-1)</var> である。</li>
+<li><code>R</code> のとき、右に <var>1</var> マス移動したことを表す。すなわち、移動前のマスを <var>(i, j)</var> とするとき、移動後のマスは <var>(i, j+1)</var> である。</li>
+<li><code>U</code> のとき、上に <var>1</var> マス移動したことを表す。すなわち、移動前のマスを <var>(i, j)</var> とするとき、移動後のマスは <var>(i-1, j)</var> である。</li>
+<li><code>D</code> のとき、下に <var>1</var> マス移動したことを表す。すなわち、移動前のマスを <var>(i, j)</var> とするとき、移動後のマスは <var>(i+1, j)</var> である。</li>
+</ul>
+<p>高橋君の移動経路上のマス（不時着したマスおよび現在いるマスを含む）はいずれも海でないことがわかっています。
+高橋君が現在いるマスとしてあり得るものの個数を出力してください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>H, W, N</var> は整数</li>
+<li><var>3 \leq H, W \leq 500</var></li>
+<li><var>1 \leq N \leq 500</var></li>
+<li><var>T</var> は <code>L</code> 、<code>R</code> 、<code>U</code> 、<code>D</code> のみからなる長さ <var>N</var> の文字列</li>
+<li><var>S_i</var> は <code>.</code> と <code>#</code> のみからなる長さ <var>W</var> の文字列</li>
+<li>高橋君が現在いるマスとしてあり得るものが少なくとも <var>1</var> 個存在する。</li>
+<li>グリッドの外周のマスはすべて海である。</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>H</var> <var>W</var> <var>N</var>
+<var>T</var>
+<var>S_1</var>
+<var>S_2</var>
+<var>\vdots</var>
+<var>S_H</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>答えを出力せよ。</p>
+</section>

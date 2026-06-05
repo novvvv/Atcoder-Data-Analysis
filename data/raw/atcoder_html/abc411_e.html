@@ -1,0 +1,58 @@
+
+			
+
+
+	
+	
+
+			<span class="lang">
+<span class="lang-ja">
+<p>配点 : <var>450</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p><var>N</var> 個の六面サイコロがあります。
+サイコロには <var>1</var> から <var>N</var> までの番号が付けられており、サイコロ <var>i</var> の各面に書かれた数はそれぞれ <var>A_{i,1},A_{i,2},\dots,A_{i,6}</var> です。</p>
+<p>今からこれら <var>N</var> 個のサイコロを全て同時に振ります。
+各サイコロの上を向いた面に書かれた数の最大値の期待値を <var>\bmod\ 998244353</var> で求めてください。</p>
+<p>なお、いずれのサイコロについても、そのサイコロを振った際に上を向く面は独立かつ一様ランダムに選ばれるものとします。</p>
+<details><summary>期待値を <var>\bmod\ 998244353</var> で求めるとは</summary><p>
+
+求める期待値は必ず有理数になることが証明できます。
+また、この問題の制約のもとでは、その値を既約分数 <var>\frac{P}{Q}</var> で表した時、<var>Q \not\equiv 0 \pmod{998244353}</var> となることも証明できます。
+よって、<var>R \times Q \equiv P \pmod{998244353}, 0 \leq R &lt 998244353</var> を満たす整数 <var>R</var> が一意に定まります。
+この <var>R</var> を求めてください。
+
+</p></details>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1\leq N \leq 10^5</var></li>
+<li><var>1\leq A_{i,j} \leq 10^9</var></li>
+<li>入力は全て整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var>
+<var>A_{1,1}</var> <var>A_{1,2}</var> <var>\dots</var> <var>A_{1,6}</var>
+<var>A_{2,1}</var> <var>A_{2,2}</var> <var>\dots</var> <var>A_{2,6}</var>
+<var>\vdots</var>
+<var>A_{N,1}</var> <var>A_{N,2}</var> <var>\dots</var> <var>A_{N,6}</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>答えを出力せよ。</p>
+</section>

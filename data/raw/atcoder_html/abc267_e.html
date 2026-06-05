@@ -1,0 +1,54 @@
+
+			
+
+
+	
+	
+
+			<span class="lang">
+<span class="lang-ja">
+<p>配点 : <var>500</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p><var>N</var> 頂点 <var>M</var> 辺の単純無向グラフ（すなわち、自己辺も多重辺もない無向グラフ）が与えられます。<var>i</var> 本目の辺は頂点 <var>U_i</var> と頂点 <var>V_i</var> を結んでいます。頂点 <var>i</var> には正整数 <var>A_i</var> が書かれています。</p>
+<p>あなたは、以下の操作を <var>N</var> 回繰り返します。</p>
+<ul>
+<li>まだ削除されていない頂点 <var>x</var> を選び、「頂点 <var>x</var> 」と「頂点 <var>x</var> を端点に持つ辺全て」を削除する。この操作のコストは、頂点 <var>x</var> と辺で直接結ばれていて、かつまだ削除されていない頂点に書かれている整数の総和である。</li>
+</ul>
+<p><var>N</var> 回の操作全体のコストを、<var>1</var> 回ごとの操作におけるコストのうちの最大値として定めます。操作全体のコストとして取り得る値の最小値を求めてください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1 \le N \le 2 \times 10^5</var></li>
+<li><var>0 \le M \le 2 \times 10^5</var></li>
+<li><var>1 \le A_i \le 10^9</var></li>
+<li><var>1 \le U_i,V_i \le N</var></li>
+<li>与えられるグラフは単純。</li>
+<li>入力は全て整数。</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var> <var>M</var>
+<var>A_1</var> <var>A_2</var> <var>\dots</var> <var>A_N</var>
+<var>U_1</var> <var>V_1</var>
+<var>U_2</var> <var>V_2</var>
+<var>\vdots</var>
+<var>U_M</var> <var>V_M</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>答えを出力せよ。</p>
+</section>

@@ -1,0 +1,169 @@
+
+<p>配点 : <var>600</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>文字列品評会では、英小文字のみからなる空でない文字列 <var>S</var> に対して、その「美しさ」を決定します。</p>
+<p>文字列 <var>S</var> の美しさは、<var>N</var> 個の審査項目の点数の和として定められます。
+<var>i = 1, 2, \ldots, N</var> について、<var>i</var> 番目の審査項目の点数は
+「文字列 <var>T_i</var>（入力で与えられる<strong>長さ <var>3</var> 以下</strong>の文字列）が <var>S</var> に連続な部分文字列として含まれる回数」に <var>P_i</var> を掛けて得られる値です。</p>
+<p>英小文字のみからなる<strong>空でない</strong>文字列 <var>S</var> の美しさとしてあり得る最大値を出力して下さい。
+ただし、美しさとしていくらでも大きい値が考えられる場合は、代わりに <code>Infinity</code> と出力して下さい。</p>
+<p>ここで、文字列 <var>U = U_1U_2\ldots U_{|U|}</var> に文字列 <var>V</var> が連続な部分列として含まれる回数とは、
+<var>1 \leq i \leq |U|-|V|+1</var> を満たす整数 <var>i</var> であって <var>U_iU_{i+1}\ldots U_{i+|V|-1} = V</var> を満たすものの個数です。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1 \leq N \leq 18278</var></li>
+<li><var>N</var> は整数</li>
+<li><var>T_i</var> は英小文字のみからなる長さ <var>1</var> 以上 <var>3</var> 以下の文字列</li>
+<li><var>i \neq j \Rightarrow T_i \neq T_j</var></li>
+<li><var>-10^9 \leq P_i \leq 10^9</var></li>
+<li><var>P_i</var> は整数</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var>
+<var>T_1</var> <var>P_1</var>
+<var>T_2</var> <var>P_2</var>
+<var>\vdots</var>
+<var>T_N</var> <var>P_N</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p>英小文字のみからなる<strong>空でない</strong>文字列 <var>S</var> の美しさとしてあり得る最大値を出力せよ。
+ただし、美しさとしていくらでも大きい値が考えられる場合は、代わりに <code>Infinity</code> と出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>3
+a -5
+ab 10
+ba -20
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>Infinity
+</pre>
+<p>例えば、<var>S =</var> <code>abzabz</code> について、</p>
+<ul>
+<li><var>1</var> 番目の審査項目の点数は、<code>a</code> が <var>S</var> に連続な部分列として含まれる回数が <var>2</var> 回であることから、<var>2 \times (-5) = -10</var> 点</li>
+<li><var>2</var> 番目の審査項目の点数は、<code>ab</code> が <var>S</var> に連続な部分列として含まれる回数が <var>2</var> 回であることから、<var>2 \times 10 = 20</var> 点</li>
+<li><var>3</var> 番目の審査項目の点数は、<code>ba</code> が <var>S</var> に連続な部分列として含まれる回数が <var>0</var> 回であることから、<var>0 \times (-20) = 0</var> 点</li>
+</ul>
+<p>であるので、<var>S</var> の美しさは <var>(-10) + 20 + 0 = 10</var> となります。</p>
+<p>別の例として、<var>S =</var> <code>abzabzabz</code> について、</p>
+<ul>
+<li><var>1</var> 番目の審査項目の点数は、<code>a</code> が <var>S</var> に連続な部分列として含まれる回数が <var>3</var> 回であることから、<var>3 \times (-5) = -15</var> 点</li>
+<li><var>2</var> 番目の審査項目の点数は、<code>ab</code> が <var>S</var> に連続な部分列として含まれる回数が <var>3</var> 回であることから、<var>3 \times 10 = 30</var> 点</li>
+<li><var>3</var> 番目の審査項目の点数は、<code>ba</code> が <var>S</var> に連続な部分列として含まれる回数が <var>0</var> 回であることから、<var>0 \times (-20) = 0</var> 点</li>
+</ul>
+<p>であるので、<var>S</var> の美しさは <var>(-15) + 30 + 0 = 15</var> となります。</p>
+<p>一般に、正の整数 <var>X</var> について、<code>abz</code> を <var>X</var> 回繰り返した文字列の美しさは <var>5X</var> となります。
+<var>S</var> の美しさとしていくらでも大きい値が考えられるため、<code>Infinity</code> を出力します。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>28
+a -5
+ab 10
+ba -20
+bb -20
+bc -20
+bd -20
+be -20
+bf -20
+bg -20
+bh -20
+bi -20
+bj -20
+bk -20
+bl -20
+bm -20
+bn -20
+bo -20
+bp -20
+bq -20
+br -20
+bs -20
+bt -20
+bu -20
+bv -20
+bw -20
+bx -20
+by -20
+bz -20
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>5
+</pre>
+<p><var>S = </var> <code>ab</code> が考えられる美しさの最大値を達成します。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>26
+a -1
+b -1
+c -1
+d -1
+e -1
+f -1
+g -1
+h -1
+i -1
+j -1
+k -1
+l -1
+m -1
+n -1
+o -1
+p -1
+q -1
+r -1
+s -1
+t -1
+u -1
+v -1
+w -1
+x -1
+y -1
+z -1
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>-1
+</pre>
+<p><var>S</var> は空でない文字列でなければならないことに注意して下さい。</p></section>
+</div>

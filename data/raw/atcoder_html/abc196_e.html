@@ -1,0 +1,54 @@
+
+			
+
+
+	
+	
+
+			<span class="lang">
+<span class="lang-ja">
+<p>配点 : <var>500</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>整数列 <var>A = (a_1, a_2, \dots, a_N), T = (t_1, t_2, \dots, t_N), X = (x_1, x_2, \dots, x_Q)</var> が与えられます。<br />
+<var>N</var> 個の関数 <var>f_1(x), f_2(x), \dots, f_N(x)</var> を、</p>
+<p><var>f_i(x) = \begin{cases} x + a_i &amp; (t_i = 1)\\ \max(x, a_i) &amp; (t_i = 2)\\ \min(x, a_i) &amp; (t_i = 3)\\ \end{cases}</var></p>
+<p>と定義します。</p>
+<p><var>i = 1, 2, \dots, Q</var> のそれぞれについて、 <var>f_N( \dots f_2(f_1(x_i)) \dots )</var> を求めてください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li>入力は全て整数</li>
+<li><var>1 ≤ N ≤ 2 \times 10^5</var></li>
+<li><var>1 ≤ Q ≤ 2 \times 10^5</var></li>
+<li><var>|a_i| ≤ 10^9</var></li>
+<li><var>1 ≤ t_i ≤ 3</var></li>
+<li><var>|x_i| ≤ 10^9</var></li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var>
+<var>a_1</var> <var>t_1</var>
+<var>a_2</var> <var>t_2</var>
+<var>\vdots</var>
+<var>a_N</var> <var>t_N</var>
+<var>Q</var>
+<var>x_1</var> <var>x_2</var> <var>\cdots</var> <var>x_Q</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p><var>Q</var> 行にかけて出力せよ。 <var>i</var> 行目には、 <var>f_N( \dots f_2(f_1(x_i)) \dots )</var> を出力せよ。</p>
+</section>

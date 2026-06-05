@@ -1,0 +1,76 @@
+tag,year,problem_count,problems_in_year,share_pct,slot_scope
+binary search,2021,5,68,7.35,all
+binary search,2022,8,152,5.26,all
+binary search,2023,10,221,4.52,all
+binary search,2024,12,126,9.52,all
+binary search,2025,5,77,6.49,all
+brute force,2021,2,68,2.94,all
+brute force,2022,9,152,5.92,all
+brute force,2023,15,221,6.79,all
+brute force,2024,8,126,6.35,all
+brute force,2025,6,77,7.79,all
+combinatorics,2021,7,68,10.29,all
+combinatorics,2022,16,152,10.53,all
+combinatorics,2023,22,221,9.95,all
+combinatorics,2024,2,126,1.59,all
+combinatorics,2025,5,77,6.49,all
+counting,2021,9,68,13.24,all
+counting,2022,15,152,9.87,all
+counting,2023,24,221,10.86,all
+counting,2024,7,126,5.56,all
+counting,2025,11,77,14.29,all
+dp,2021,14,68,20.59,all
+dp,2022,32,152,21.05,all
+dp,2023,39,221,17.65,all
+dp,2024,14,126,11.11,all
+dp,2025,8,77,10.39,all
+graph theory,2021,5,68,7.35,all
+graph theory,2022,9,152,5.92,all
+graph theory,2023,11,221,4.98,all
+graph theory,2024,6,126,4.76,all
+graph theory,2025,4,77,5.19,all
+greedy,2021,6,68,8.82,all
+greedy,2022,10,152,6.58,all
+greedy,2023,30,221,13.57,all
+greedy,2024,20,126,15.87,all
+greedy,2025,9,77,11.69,all
+grid,2021,3,68,4.41,all
+grid,2022,7,152,4.61,all
+grid,2023,17,221,7.69,all
+grid,2024,10,126,7.94,all
+grid,2025,5,77,6.49,all
+implementation,2021,23,68,33.82,all
+implementation,2022,51,152,33.55,all
+implementation,2023,81,221,36.65,all
+implementation,2024,44,126,34.92,all
+implementation,2025,31,77,40.26,all
+math,2021,12,68,17.65,all
+math,2022,11,152,7.24,all
+math,2023,18,221,8.14,all
+math,2024,6,126,4.76,all
+math,2025,6,77,7.79,all
+modular arithmetic,2021,9,68,13.24,all
+modular arithmetic,2022,18,152,11.84,all
+modular arithmetic,2023,27,221,12.22,all
+modular arithmetic,2024,6,126,4.76,all
+modular arithmetic,2025,4,77,5.19,all
+prefix sum,2021,3,68,4.41,all
+prefix sum,2022,9,152,5.92,all
+prefix sum,2023,15,221,6.79,all
+prefix sum,2024,11,126,8.73,all
+prefix sum,2025,5,77,6.49,all
+simulation,2021,6,68,8.82,all
+simulation,2022,15,152,9.87,all
+simulation,2023,29,221,13.12,all
+simulation,2024,15,126,11.9,all
+simulation,2025,15,77,19.48,all
+sorting,2021,10,68,14.71,all
+sorting,2022,5,152,3.29,all
+sorting,2023,21,221,9.5,all
+sorting,2024,13,126,10.32,all
+sorting,2025,6,77,7.79,all
+string,2021,6,68,8.82,all
+string,2022,25,152,16.45,all
+string,2023,38,221,17.19,all
+string,2024,21,126,16.67,all
+string,2025,12,77,15.58,all

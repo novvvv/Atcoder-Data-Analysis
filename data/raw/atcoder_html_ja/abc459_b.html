@@ -1,0 +1,84 @@
+
+<p>配点 : <var>200</var> 点</p>
+
+<div class="part">
+<section>
+<h3>問題文</h3><p>英小文字のみからなる <var>N</var> 個の文字列 <var>S_1,S_2,\ldots,S_N</var> が与えられます。</p>
+<p><var>N</var> 個の数字 <var>C_1,C_2,\ldots,C_N</var> を以下のように定義します。</p>
+<ul>
+<li><var>S_i</var> の先頭の文字が <code>a</code>, <code>b</code>, <code>c</code> のいずれかならば <var>C_i=</var><code>2</code></li>
+<li><var>S_i</var> の先頭の文字が <code>d</code>, <code>e</code>, <code>f</code> のいずれかならば <var>C_i=</var><code>3</code></li>
+<li><var>S_i</var> の先頭の文字が <code>g</code>, <code>h</code>, <code>i</code> のいずれかならば <var>C_i=</var><code>4</code></li>
+<li><var>S_i</var> の先頭の文字が <code>j</code>, <code>k</code>, <code>l</code> のいずれかならば <var>C_i=</var><code>5</code></li>
+<li><var>S_i</var> の先頭の文字が <code>m</code>, <code>n</code>, <code>o</code> のいずれかならば <var>C_i=</var><code>6</code></li>
+<li><var>S_i</var> の先頭の文字が <code>p</code>, <code>q</code>, <code>r</code>, <code>s</code> のいずれかならば <var>C_i=</var><code>7</code></li>
+<li><var>S_i</var> の先頭の文字が <code>t</code>, <code>u</code>, <code>v</code> のいずれかならば <var>C_i=</var><code>8</code></li>
+<li><var>S_i</var> の先頭の文字が <code>w</code>, <code>x</code>, <code>y</code>, <code>z</code> のいずれかならば <var>C_i=</var><code>9</code></li>
+</ul>
+<p><var>C_1,C_2,\ldots,C_N</var> をこの順に連結した文字列を出力してください。</p>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>制約</h3><ul>
+<li><var>1\leq N\leq 10</var></li>
+<li><var>N</var> は整数</li>
+<li><var>S_i</var> は英小文字のみからなる長さ <var>1</var> 以上 <var>10</var> 以下の文字列</li>
+</ul>
+</section>
+</div>
+
+<hr />
+<div class="io-style">
+<div class="part">
+<section>
+<h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
+<pre><var>N</var>
+<var>S_1</var> <var>S_2</var> <var>\ldots</var> <var>S_N</var>
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力</h3><p><var>C_1,C_2,\ldots,C_N</var> をこの順に連結した文字列を出力せよ。</p>
+</section>
+</div>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 1</h3><pre>2
+algorithm heuristic
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 1</h3><pre>24
+</pre>
+<ul>
+<li><var>S_1=</var><code>algorithm</code> の先頭の文字は <code>a</code> であるため、<var>C_1=</var><code>2</code> となります。</li>
+<li><var>S_2=</var><code>heuristic</code> の先頭の文字は <code>h</code> であるため、<var>C_2=</var><code>4</code> となります。</li>
+</ul>
+<p>よって、これらを連結した <code>24</code> を出力します。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 2</h3><pre>3
+i love you
+</pre>
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 2</h3><pre>459
+</pre></section>
+</div>
