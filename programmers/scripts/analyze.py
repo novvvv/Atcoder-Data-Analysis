@@ -1,15 +1,16 @@
-"""Programmers 기업 코딩테스트 통계 집계 (파이프라인 3단계).
+"""Programmers 기업 코딩테스트 통계 집계 (파이프라인 4단계).
 
 파이프라인 구성:
-  1단계 수집  : crawl.py + detail.py
-  2단계 정제  : clean.py
-  3단계 집계  : analyze.py  ← 현재 파일
+  1단계 수집  : crawl.py   -> data/programmers_data.csv
+  2단계 정제  : clean.py   -> data/programmers_clean.csv
+  3단계 보강  : detail.py  -> data/programmers_clean.csv (지문글자수 추가)
+  4단계 집계  : analyze.py <- 현재 파일
 
-입력: programmers_clean.csv
+입력: data/programmers_clean.csv
 출력:
-  - programmers_yearly_summary.csv       연도별 집계
-  - programmers_company_summary.csv      연도×기업 교차 집계
-  - programmers_level_distribution.csv  연도별 레벨 분포
+  - data/programmers_yearly_summary.csv       연도별 집계
+  - data/programmers_company_summary.csv      연도×기업 교차 집계
+  - data/programmers_level_distribution.csv  연도별 레벨 분포
 """
 
 from __future__ import annotations
@@ -112,7 +113,7 @@ def aggregate_level_distribution(df: pd.DataFrame) -> pd.DataFrame:
 # ─── 메인 ──────────────────────────────────────────────────────────────────
 
 def main() -> None:
-    df = pd.read_csv("programmers_clean.csv")
+    df = pd.read_csv("../data/programmers_clean.csv")
     print(f"[info] 로드 완료: {len(df)}개 문제")
 
     # 수치 변환
@@ -125,19 +126,19 @@ def main() -> None:
     yearly = aggregate_yearly(df)
     print("\n=== 연도별 집계 ===")
     print(yearly.to_string(index=False))
-    yearly.to_csv("programmers_yearly_summary.csv", index=False, encoding="utf-8-sig")
+    yearly.to_csv("../data/programmers_yearly_summary.csv", index=False, encoding="utf-8-sig")
 
     # ── 2. 연도 × 기업 교차 집계 ────────────────────────────────────────────
     company_yearly = aggregate_company_yearly(df)
     print("\n=== 연도 × 기업 집계 ===")
     print(company_yearly.to_string(index=False))
-    company_yearly.to_csv("programmers_company_summary.csv", index=False, encoding="utf-8-sig")
+    company_yearly.to_csv("../data/programmers_company_summary.csv", index=False, encoding="utf-8-sig")
 
     # ── 3. 연도별 레벨 분포 ─────────────────────────────────────────────────
     level_dist = aggregate_level_distribution(df)
     print("\n=== 연도별 레벨 분포 ===")
     print(level_dist.to_string(index=False))
-    level_dist.to_csv("programmers_level_distribution.csv", index=False, encoding="utf-8-sig")
+    level_dist.to_csv("../data/programmers_level_distribution.csv", index=False, encoding="utf-8-sig")
 
     print("\n[완료]")
     print("  → programmers_yearly_summary.csv")
