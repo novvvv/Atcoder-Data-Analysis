@@ -1,0 +1,76 @@
+tag,year,problem_count,problems_in_year,share_pct
+bfs,2021,1,44,2.27
+bfs,2022,6,95,6.32
+bfs,2023,12,145,8.28
+bfs,2024,6,90,6.67
+bfs,2025,6,55,10.91
+binary search,2021,5,44,11.36
+binary search,2022,5,95,5.26
+binary search,2023,10,145,6.9
+binary search,2024,12,90,13.33
+binary search,2025,5,55,9.09
+combinatorics,2021,7,44,15.91
+combinatorics,2022,11,95,11.58
+combinatorics,2023,18,145,12.41
+combinatorics,2024,2,90,2.22
+combinatorics,2025,5,55,9.09
+counting,2021,7,44,15.91
+counting,2022,9,95,9.47
+counting,2023,19,145,13.1
+counting,2024,6,90,6.67
+counting,2025,10,55,18.18
+dp,2021,12,44,27.27
+dp,2022,26,95,27.37
+dp,2023,30,145,20.69
+dp,2024,14,90,15.56
+dp,2025,8,55,14.55
+graph,2021,4,44,9.09
+graph,2022,8,95,8.42
+graph,2023,13,145,8.97
+graph,2024,3,90,3.33
+graph,2025,3,55,5.45
+graph theory,2021,3,44,6.82
+graph theory,2022,9,95,9.47
+graph theory,2023,10,145,6.9
+graph theory,2024,6,90,6.67
+graph theory,2025,4,55,7.27
+greedy,2021,6,44,13.64
+greedy,2022,9,95,9.47
+greedy,2023,24,145,16.55
+greedy,2024,16,90,17.78
+greedy,2025,9,55,16.36
+grid,2021,1,44,2.27
+grid,2022,5,95,5.26
+grid,2023,13,145,8.97
+grid,2024,9,90,10.0
+grid,2025,5,55,9.09
+implementation,2021,8,44,18.18
+implementation,2022,18,95,18.95
+implementation,2023,28,145,19.31
+implementation,2024,11,90,12.22
+implementation,2025,10,55,18.18
+modular arithmetic,2021,7,44,15.91
+modular arithmetic,2022,14,95,14.74
+modular arithmetic,2023,23,145,15.86
+modular arithmetic,2024,5,90,5.56
+modular arithmetic,2025,4,55,7.27
+prefix sum,2021,3,44,6.82
+prefix sum,2022,7,95,7.37
+prefix sum,2023,13,145,8.97
+prefix sum,2024,11,90,12.22
+prefix sum,2025,4,55,7.27
+simulation,2021,2,44,4.55
+simulation,2022,7,95,7.37
+simulation,2023,18,145,12.41
+simulation,2024,7,90,7.78
+simulation,2025,9,55,16.36
+sorting,2021,9,44,20.45
+sorting,2022,4,95,4.21
+sorting,2023,17,145,11.72
+sorting,2024,8,90,8.89
+sorting,2025,6,55,10.91
+string,2021,2,44,4.55
+string,2022,11,95,11.58
+string,2023,15,145,10.34
+string,2024,8,90,8.89
+string,2025,5,55,9.09

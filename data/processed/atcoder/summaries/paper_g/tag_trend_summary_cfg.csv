@@ -1,0 +1,16 @@
+tag,delta_pp
+simulation,11.81
+bfs,8.64
+grid,6.82
+string,4.54
+greedy,2.72
+counting,2.27
+graph theory,0.45
+prefix sum,0.45
+implementation,0.0
+binary search,-2.27
+graph,-3.64
+combinatorics,-6.82
+modular arithmetic,-8.64
+sorting,-9.54
+dp,-12.72
