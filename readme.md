@@ -1,7 +1,6 @@
 # 알고리즘 코딩테스트의 난이도 트렌드 분석
 
-Atcoder 기반 기업 알고리즘 대회 문항 특성 변화 분석 (2021-2025)
-
+Atcoder 기반 기업 알고리즘 대회 문항 특성 변화 분석 (2021-2025)  
 고급 프로그래밍 설계 텀 프로젝트 — 최도일(202001836) · 박서연(202202152)
 
 ---
@@ -12,8 +11,8 @@ Atcoder 기반 기업 알고리즘 대회 문항 특성 변화 분석 (2021-2025
 
 | RQ | 질문 | 핵심 결과 |
 |----|------|-----------|
-| RQ1 | 난이도 인플레이션 구간이 존재하는가? | 2021→2023년 평균 난이도 약 310p 하락, 이후 수렴 안정화 |
-| RQ2 | 기업 스폰서 대회 태그 경향은? | simulation·grid·BFS 급상승 / DP·sorting·combinatorics 하락 |
+| RQ1 | 난이도 인플레이션 구간이 존재하는가? | 2021→2023년 평균 난이도 약 180p 하락, 2025년 1,273 최저 |
+| RQ2 | 기업 스폰서 대회 태그 경향은? | simulation·bfs·grid 급상승 / dp·number theory·sorting 하락 |
 | RQ3 | 취준생 학습 우선순위는? | 최우선: implementation·simulation·greedy / 추가: 빠른 지문 독해 훈련 |
 
 ---
@@ -38,7 +37,7 @@ Atcoder-Data-Analysis/
 │
 ├── notebooks/
 │   ├── atcoder_visualize.ipynb         # AtCoder 분석 시각화
-│   └── programmers_analysis.ipynb      # Programmers 분석 시각화
+│   └── programmers_analysis.ipynb      # Programmers 데이터 선정 탐색
 │
 ├── programmers/                        # Programmers 기업 기출 서브 파이프라인
 │   ├── scripts/
@@ -55,9 +54,9 @@ Atcoder-Data-Analysis/
 │
 ├── scripts/
 │   ├── collect_atcoder_2021_2026.py    # AtCoder 메인 수집 파이프라인
-│   └── visualize_atcoder.py            # 논문용 차트 생성 (C–F 슬롯 기준 7종)
+│   └── visualize_atcoder.py            # 논문용 차트 생성 (C–G 슬롯 기준 7종)
 │
-└── readme.md
+└── README.md
 ```
 
 ---
@@ -74,11 +73,11 @@ Atcoder-Data-Analysis/
 
 **필터링 기준**
 - 대상 스폰서: `config/sponsor_whitelist.yaml` 에 정의된 일본 대기업 15개사 (Toyota, 도쿄해상, Panasonic 등)
-- 슬롯 범위: C–F (중~고난도, 기업 코딩테스트 수준)
+- 슬롯 범위: C–G (중~고난도, 기업 코딩테스트 수준)
 - 기간: 2021–2025
 
-**최종 분석 대상** — 전체 644문제 (87대회) → C–F 슬롯 **348문항**  
-연도별: 2021(40) / 2022(76) / 2023(116) / 2024(72) / 2025(44)
+**최종 분석 대상** — 전체 644문제 (87대회) → C–G 슬롯 **429문항**  
+연도별: 2021(44) / 2022(95) / 2023(145) / 2024(90) / 2025(55)
 
 **주요 출력**
 ```
@@ -103,35 +102,35 @@ crawl.py → clean.py → detail.py → analyze.py
 
 | 파일 | 내용 |
 |------|------|
-| `yearly_difficulty_cf.png` | 연도별 난이도 추세 (IQR 절사평균) |
-| `yearly_statement_length_cf.png` | 연도별 지문 길이 추세 |
-| `halfyearly_difficulty_cf.png` | 반기별 난이도 추세 |
-| `halfyearly_statement_length_cf.png` | 반기별 지문 길이 추세 |
-| `top_tags_cf_frequency.png` | 상위 15개 알고리즘 태그 빈도 |
-| `tag_yearly_prevalence_cf.png` | 연도×태그 히트맵 |
-| `tag_share_delta_cf.png` | 태그 비중 변화 (2021 vs 2025) |
+| `yearly_difficulty_cfg.png` | 연도별 난이도 추세 (IQR 절사평균) |
+| `yearly_statement_length_cfg.png` | 연도별 지문 길이 추세 |
+| `halfyearly_difficulty_cfg.png` | 반기별 난이도 추세 |
+| `halfyearly_statement_length_cfg.png` | 반기별 지문 길이 추세 |
+| `top_tags_cfg_frequency.png` | 상위 15개 알고리즘 태그 빈도 |
+| `tag_yearly_prevalence_cfg.png` | 연도×태그 히트맵 |
+| `tag_share_delta_cfg.png` | 태그 비중 변화 (2021 vs 2025) |
 
 ---
 
 ## 주요 분석 결과
 
 ### 난이도 추세 (RQ1)
-- 2021년 평균 ~1,380 → 2023년 ~1,070으로 **약 310p 하락** (난이도 인플레이션 구간)
-- 2024–2025년: 1,050–1,090 수렴 → 안정화 단계
+- 2021년 평균 ~1,494 → 2023년 ~1,314으로 **약 180p 하락** (난이도 인플레이션 구간)
+- 2024년 ~1,329 소폭 반등 후 2025년 ~1,273으로 재하락
 
 ### 지문 길이 추세
-- 2021년 ~785자 → 2025년 ~1,072자 (**5년간 약 36% 증가**)
+- 2021년 ~781자 → 2025년 ~1,141자 (**5년간 약 46% 증가**)
 - 수치적 난이도↓ + 지문 길이↑ → 독해력의 중요성 증가
 
 ### 알고리즘 태그 경향 (RQ2)
 | 방향 | 태그 | 변화 |
 |------|------|------|
-| 상승 | simulation | +15.4%p |
-| 상승 | grid | +8.9%p |
-| 상승 | bfs | +6.6%p |
-| 하락 | dp | -11.4%p |
-| 하락 | sorting | -8.9%p |
-| 하락 | combinatorics | -8.2%p |
+| 상승 | simulation | +11.8%p |
+| 상승 | bfs | +8.6%p |
+| 상승 | grid | +6.8%p |
+| 하락 | dp | -12.7%p |
+| 하락 | number theory | -10.0%p |
+| 하락 | sorting | -9.5%p |
 
 ### 취준생 학습 가이드 (RQ3)
 | 우선순위 | 태그 | 근거 |
@@ -139,7 +138,7 @@ crawl.py → clean.py → detail.py → analyze.py
 | 최우선 | implementation, simulation, greedy | 빈도 TOP + 상승 트렌드 |
 | 우선 | grid, bfs, prefix sum, string | 최근 상승 태그 |
 | 유지 | dp, counting, sorting | 절대 빈도 높으나 하락 추세 |
-| 축소 가능 | modular arithmetic, combinatorics, graph theory | 빈도 낮고 하락 추세 |
+| 축소 가능 | modular arithmetic, combinatorics, number theory | 빈도 낮고 하락 추세 |
 
 ---
 
